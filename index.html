@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Tour Operator</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logoStackly.webp" type="image/webp">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+        <canvas id="threejs-canvas"></canvas>
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide" style="background: url('assets/images/img_13.webp') center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container text-center">
+                        <h1 class="spin-text"><span class="highlight">Discover</span> The World</h1>
+                        <p class="lead mb-4 slide-text">Unforgettable journeys, expertly crafted just for you.</p>
+                        <a href="destinations.html" class="btn custom-btn custom-btn-primary btn-lg rounded-pill px-5 slide-btn">Explore Now</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide" style="background: url('assets/images/img_56.webp') center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container text-center">
+                        <h1 class="spin-text"><span class="highlight">Experience</span> Nature</h1>
+                        <p class="lead mb-4 slide-text">Immerse yourself in breathtaking landscapes and pristine environments.</p>
+                        <a href="destinations.html" class="btn custom-btn custom-btn-primary btn-lg rounded-pill px-5 slide-btn">Discover Nature</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide" style="background: url('assets/images/img_53.webp') center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container text-center">
+                        <h1 class="spin-text"><span class="highlight">Unwind</span> & Relax</h1>
+                        <p class="lead mb-4 slide-text">Luxury stays, serene getaways, and top-tier hospitality await.</p>
+                        <a href="packages.html" class="btn custom-btn custom-btn-primary btn-lg rounded-pill px-5 slide-btn">View Packages</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- 2. Search Tours -->
+    <section class="search-tours" data-aos="fade-up">
+        <div class="container">
+            <div class="search-form-wrapper bg-white p-4 p-md-5 shadow-lg">
+                <form class="row g-3 align-items-center">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <label class="form-label fw-bold text-secondary"><i class="fa-solid fa-location-dot text-primary me-2"></i>Destination</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 bg-light py-2" placeholder="Where to?">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <label class="form-label fw-bold text-secondary"><i class="fa-regular fa-calendar text-primary me-2"></i>Date</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control border-0 bg-light py-2">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <label class="form-label fw-bold text-secondary"><i class="fa-solid fa-user-group text-primary me-2"></i>Guests</label>
+                        <div class="input-group">
+                            <select class="form-select border-0 bg-light py-2">
+                                <option>1 Person</option>
+                                <option>2 Persons</option>
+                                <option>3+ Persons</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 mt-md-4 mt-lg-0 pt-lg-4 text-center">
+                        <button type="submit" class="btn custom-btn custom-btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm hover-effect"><i class="fa-solid fa-magnifying-glass me-2"></i>Search Tours</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Us Snippet -->
+    <section class="py-5 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image-wrapper position-relative">
+                        <img src="assets/images/img_57.webp" class="img-fluid rounded-4 shadow-lg about-main-img" alt="About Main">
+                        <img src="assets/images/img_58.webp" class="img-fluid rounded-4 shadow-lg about-sub-img d-none d-md-block" alt="About Sub">
+                        <div class="experience-badge bg-primary text-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center">
+                            <span class="fs-2 fw-bold">15+</span>
+                            <span class="fs-6 text-uppercase text-center lh-sm">Years<br>Exp.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <h6 class="text-primary text-uppercase fw-bold mb-3 tracking-wider">Get To Know Us</h6>
+                    <h2 class="display-6 fw-bold mb-4 text-secondary">We Create The Best Travel Experiences</h2>
+                    <p class="text-muted mb-4 lead">With over 15 years in the travel industry, our tour operator services offer hand-picked destinations, expert guides, and a commitment to making your holiday truly memorable.</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <ul class="list-unstyled mb-0 feature-list">
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Hand-picked Destinations</li>
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Expert Local Guides</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0 feature-list">
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> 24/7 Support</li>
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Best Price Guarantee</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="btn custom-btn custom-btn-primary rounded-pill px-5 py-3 fw-bold hover-effect shadow-sm">Read More About Us <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Popular Destinations -->
+    <section class="popular-destinations py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 align-items-end" data-aos="fade-up">
+                <div class="col-md-8 text-center text-md-start">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Top Destinations</h6>
+                    <h2 class="display-6 fw-bold text-secondary mb-0">Explore Our Most Booked Locations</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
+                    <a href="destinations.html" class="btn custom-btn custom-btn-outlined rounded-pill px-4 py-2 hover-effect">View All Destinations</a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Destination 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="dest-card position-relative rounded-4 overflow-hidden shadow-sm">
+                        <div class="dest-img-wrapper">
+                            <img src="assets/images/img_09.webp" class="img-fluid dest-img" alt="London">
+                        </div>
+                        <div class="dest-badge bg-primary text-white rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 fw-bold fs-7 shadow-sm">
+                            15 Tours
+                        </div>
+                        <div class="dest-content position-absolute bottom-0 start-0 w-100 p-4">
+                            <h4 class="text-white fw-bold mb-1">London, UK</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-white-50"><i class="fa-solid fa-star text-warning"></i> 4.8 (2.5k reviews)</span>
+                                <span class="text-white fw-bold fs-5">From $599</span>
+                            </div>
+                        </div>
+                        <a href="destinations.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <!-- Destination 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="dest-card position-relative rounded-4 overflow-hidden shadow-sm">
+                        <div class="dest-img-wrapper">
+                            <img src="assets/images/img_59.webp" class="img-fluid dest-img" alt="Paris">
+                        </div>
+                        <div class="dest-badge bg-primary text-white rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 fw-bold fs-7 shadow-sm">
+                            22 Tours
+                        </div>
+                        <div class="dest-content position-absolute bottom-0 start-0 w-100 p-4">
+                            <h4 class="text-white fw-bold mb-1">Paris, France</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-white-50"><i class="fa-solid fa-star text-warning"></i> 4.9 (3.1k reviews)</span>
+                                <span class="text-white fw-bold fs-5">From $699</span>
+                            </div>
+                        </div>
+                        <a href="destinations.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <!-- Destination 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="dest-card position-relative rounded-4 overflow-hidden shadow-sm">
+                        <div class="dest-img-wrapper">
+                            <img src="assets/images/img_16.webp" class="img-fluid dest-img" alt="Bali">
+                        </div>
+                        <div class="dest-badge bg-primary text-white rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 fw-bold fs-7 shadow-sm">
+                            18 Tours
+                        </div>
+                        <div class="dest-content position-absolute bottom-0 start-0 w-100 p-4">
+                            <h4 class="text-white fw-bold mb-1">Bali, Indonesia</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-white-50"><i class="fa-solid fa-star text-warning"></i> 4.7 (1.8k reviews)</span>
+                                <span class="text-white fw-bold fs-5">From $899</span>
+                            </div>
+                        </div>
+                        <a href="destinations.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Featured Packages -->
+    <section class="featured-packages py-5">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Exclusive Deals</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Our Featured Packages</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Handpicked luxury packages crafted to give you the ultimate travel experience.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Package 1 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="package-card position-relative rounded-4 overflow-hidden shadow">
+                        <div class="pkg-img-wrapper">
+                            <img src="assets/images/img_60.webp" class="img-fluid w-100" alt="Greece">
+                        </div>
+                        <div class="pkg-badge bg-warning text-dark fw-bold px-3 py-1 position-absolute top-0 start-0 m-4 rounded-pill shadow-sm">
+                            <i class="fa-solid fa-fire me-1"></i> Best Seller
+                        </div>
+                        <div class="pkg-content position-absolute bottom-0 start-0 w-100 p-4 p-md-5">
+                            <div class="pkg-meta d-flex gap-3 mb-2 text-white-50 fs-7 fw-bold">
+                                <span><i class="fa-regular fa-clock text-primary"></i> 7 Days</span>
+                                <span><i class="fa-solid fa-user-group text-primary"></i> 2 Persons</span>
+                                <span><i class="fa-solid fa-location-dot text-primary"></i> Greece</span>
+                            </div>
+                            <h3 class="text-white fw-bold mb-2">Athens & Santorini Highlights</h3>
+                            <div class="pkg-hover-info">
+                                <p class="text-light mb-3 opacity-75">Experience the ancient ruins of Athens followed by the breathtaking sunsets of Santorini in this ultimate luxury escape.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="text-primary fw-bold mb-0">$1,499</h4>
+                                    <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 hover-effect">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="package-card position-relative rounded-4 overflow-hidden shadow">
+                        <div class="pkg-img-wrapper">
+                            <img src="assets/images/img_61.webp" class="img-fluid w-100" alt="Maldives">
+                        </div>
+                        <div class="pkg-badge bg-info text-white fw-bold px-3 py-1 position-absolute top-0 start-0 m-4 rounded-pill shadow-sm">
+                            <i class="fa-solid fa-gem me-1"></i> Luxury
+                        </div>
+                        <div class="pkg-content position-absolute bottom-0 start-0 w-100 p-4 p-md-5">
+                            <div class="pkg-meta d-flex gap-3 mb-2 text-white-50 fs-7 fw-bold">
+                                <span><i class="fa-regular fa-clock text-primary"></i> 5 Days</span>
+                                <span><i class="fa-solid fa-user-group text-primary"></i> 2 Persons</span>
+                                <span><i class="fa-solid fa-location-dot text-primary"></i> Maldives</span>
+                            </div>
+                            <h3 class="text-white fw-bold mb-2">Maldives Water Villa Escape</h3>
+                            <div class="pkg-hover-info">
+                                <p class="text-light mb-3 opacity-75">Relax in a private water villa surrounded by crystal clear waters, perfect for honeymoons and romantic getaways.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="text-primary fw-bold mb-0">$2,299</h4>
+                                    <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 hover-effect">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Why Choose Us -->
+    <section class="why-choose-us py-5 bg-light position-relative">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Our Advantage</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Why Travel With Us?</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">We go above and beyond to ensure your journey is seamless, memorable, and absolutely stress-free.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Reason 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box bg-white p-5 rounded-4 shadow-sm text-center h-100 position-relative">
+                        <div class="icon-box bg-light text-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center transition-all">
+                            <i class="fa-solid fa-map-location-dot fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Expert Guides</h4>
+                        <p class="text-muted mb-0">Our highly trained local experts provide deep insights and access to hidden gems you won't find in guidebooks.</p>
+                    </div>
+                </div>
+                <!-- Reason 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box bg-white p-5 rounded-4 shadow-sm text-center h-100 position-relative">
+                        <div class="icon-box bg-light text-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center transition-all">
+                            <i class="fa-solid fa-tags fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Best Price Guarantee</h4>
+                        <p class="text-muted mb-0">We negotiate competitive pricing and secure exclusive deals to offer you premium luxury without the premium price tag.</p>
+                    </div>
+                </div>
+                <!-- Reason 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box bg-white p-5 rounded-4 shadow-sm text-center h-100 position-relative">
+                        <div class="icon-box bg-light text-primary rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center transition-all">
+                            <i class="fa-solid fa-headset fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">24/7 Premium Support</h4>
+                        <p class="text-muted mb-0">No matter the time zone, our dedicated support team is always available to assist you throughout your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Promo Video -->
+    <section class="promo-video-section position-relative text-white text-center d-flex align-items-center justify-content-center">
+        <!-- Parallax Background -->
+        <div class="promo-bg position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_62.webp') center/cover fixed;"></div>
+        <!-- Dark Overlay -->
+        <div class="promo-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        
+        <div class="container position-relative" style="z-index: 2; padding: 120px 0;" data-aos="zoom-in">
+            <h6 class="text-uppercase fw-bold mb-3 tracking-wider text-light">Cinematic Tour</h6>
+            <h2 class="display-4 fw-bold mb-5 text-white text-shadow">Experience The Magic</h2>
+            
+            <a href="#" class="play-btn d-inline-flex align-items-center justify-content-center bg-white text-primary rounded-circle position-relative">
+                <i class="fa-solid fa-play ms-1"></i>
+            </a>
+            <p class="mt-4 fw-bold text-uppercase tracking-wider">Watch Promo Video</p>
+        </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Testimonials</h6>
+                    <h2 class="display-6 fw-bold text-secondary">What Our Clients Say</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Don't just take our word for it. Read what our happy travelers have to say about their experiences.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 position-relative">
+                        <i class="fa-solid fa-quote-right position-absolute top-0 end-0 m-4 text-light opacity-50 fa-3x"></i>
+                        <div class="text-warning mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-muted fst-italic mb-4">"Absolutely wonderful trip! Everything was perfectly organized from start to finish. The hotels were luxurious and the guides were brilliant."</p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <img src="assets/images/img_63.webp" alt="Sarah Jenkins" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" style="object-fit:cover;">
+                            <div>
+                                <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                                <small class="text-muted">Traveler from USA</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 position-relative">
+                        <i class="fa-solid fa-quote-right position-absolute top-0 end-0 m-4 text-light opacity-50 fa-3x"></i>
+                        <div class="text-warning mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-muted fst-italic mb-4">"Great value for money! Our tour operator took care of all the stressful planning so we could just relax and enjoy our honeymoon in Paris."</p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <img src="assets/images/img_64.webp" alt="Mark Stevenson" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" style="object-fit:cover;">
+                            <div>
+                                <h6 class="fw-bold mb-0">Mark Stevenson</h6>
+                                <small class="text-muted">Traveler from UK</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card bg-white p-4 p-md-5 rounded-4 shadow-sm h-100 position-relative">
+                        <i class="fa-solid fa-quote-right position-absolute top-0 end-0 m-4 text-light opacity-50 fa-3x"></i>
+                        <div class="text-warning mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-muted fst-italic mb-4">"Our family vacation to Japan was completely unforgettable thanks to this agency. They catered to all our kids' needs perfectly."</p>
+                        <div class="d-flex align-items-center mt-auto">
+                            <img src="assets/images/img_65.webp" alt="Emma Williams" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" style="object-fit:cover;">
+                            <div>
+                                <h6 class="fw-bold mb-0">The Williams Family</h6>
+                                <small class="text-muted">Travelers from Australia</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Travel Stats -->
+    <section class="travel-stats-section position-relative py-5 text-white text-center">
+        <!-- Background with parallax and overlay -->
+        <div class="stats-bg position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_66.webp') center/cover fixed;"></div>
+        <div class="stats-overlay position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75"></div>
+        
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-box p-3 transition-all">
+                        <i class="fa-solid fa-earth-americas fa-3x mb-3 text-white-50 transition-all"></i>
+                        <h2 class="display-4 fw-bold text-white mb-1">50+</h2>
+                        <h6 class="text-uppercase tracking-wider fw-bold">Destinations</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-box p-3 transition-all">
+                        <i class="fa-solid fa-face-smile-beam fa-3x mb-3 text-white-50 transition-all"></i>
+                        <h2 class="display-4 fw-bold text-white mb-1">10k+</h2>
+                        <h6 class="text-uppercase tracking-wider fw-bold">Happy Travelers</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-box p-3 transition-all">
+                        <i class="fa-solid fa-calendar-check fa-3x mb-3 text-white-50 transition-all"></i>
+                        <h2 class="display-4 fw-bold text-white mb-1">15+</h2>
+                        <h6 class="text-uppercase tracking-wider fw-bold">Years Experience</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-box p-3 transition-all">
+                        <i class="fa-solid fa-users fa-3x mb-3 text-white-50 transition-all"></i>
+                        <h2 class="display-4 fw-bold text-white mb-1">200+</h2>
+                        <h6 class="text-uppercase tracking-wider fw-bold">Tour Guides</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Our Guides -->
+    <section class="our-guides-section py-5">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Our Team</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Meet Our Top Guides</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Our passionate and experienced guides are here to make sure you have the trip of a lifetime.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Guide 1 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="guide-card bg-white rounded-4 overflow-hidden shadow-sm text-center h-100 position-relative">
+                        <div class="guide-img-wrapper position-relative overflow-hidden">
+                            <img src="assets/images/img_67.webp" class="img-fluid w-100 guide-img" alt="Elena">
+                            <div class="guide-social position-absolute bottom-0 w-100 d-flex justify-content-center gap-2 p-3">
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-facebook-f text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-x-twitter text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-instagram text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Elena</h5>
+                            <p class="text-primary fw-bold mb-0 fs-7">Europe Expert</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guide 2 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="guide-card bg-white rounded-4 overflow-hidden shadow-sm text-center h-100 position-relative">
+                        <div class="guide-img-wrapper position-relative overflow-hidden">
+                            <img src="assets/images/img_68.webp" class="img-fluid w-100 guide-img" alt="David">
+                            <div class="guide-social position-absolute bottom-0 w-100 d-flex justify-content-center gap-2 p-3">
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-facebook-f text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-x-twitter text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-instagram text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">David</h5>
+                            <p class="text-primary fw-bold mb-0 fs-7">Adventure Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guide 3 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="guide-card bg-white rounded-4 overflow-hidden shadow-sm text-center h-100 position-relative">
+                        <div class="guide-img-wrapper position-relative overflow-hidden">
+                            <img src="assets/images/img_69.webp" class="img-fluid w-100 guide-img" alt="Sophia">
+                            <div class="guide-social position-absolute bottom-0 w-100 d-flex justify-content-center gap-2 p-3">
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-facebook-f text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-x-twitter text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-instagram text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Sophia</h5>
+                            <p class="text-primary fw-bold mb-0 fs-7">Asia Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guide 4 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="guide-card bg-white rounded-4 overflow-hidden shadow-sm text-center h-100 position-relative">
+                        <div class="guide-img-wrapper position-relative overflow-hidden">
+                            <img src="assets/images/img_70.webp" class="img-fluid w-100 guide-img" alt="John">
+                            <div class="guide-social position-absolute bottom-0 w-100 d-flex justify-content-center gap-2 p-3">
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-facebook-f text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-x-twitter text-primary"></i></a>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-circle shadow-sm"><i class="fa-brands fa-instagram text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">John</h5>
+                            <p class="text-primary fw-bold mb-0 fs-7">Wildlife Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Upcoming Events -->
+    <section class="upcoming-events-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-md-8 text-center text-md-start">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Join The Adventure</h6>
+                    <h2 class="display-6 fw-bold text-secondary mb-0">Upcoming Group Tours</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-4 mt-md-0 d-flex align-items-end justify-content-md-end justify-content-center">
+                    <a href="packages.html" class="btn custom-btn custom-btn-outlined rounded-pill px-4 py-2 hover-effect">View All Schedule</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Event 1 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card d-flex flex-column flex-sm-row bg-white p-3 p-md-4 shadow-sm rounded-4 align-items-sm-center">
+                        <div class="event-date bg-primary text-white text-center rounded-4 me-sm-4 mb-3 mb-sm-0 flex-shrink-0 d-flex flex-column justify-content-center align-items-center shadow-sm">
+                            <span class="fs-2 fw-bold lh-1">15</span>
+                            <span class="fs-6 text-uppercase tracking-wider">Oct</span>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-info text-white rounded-pill px-3 py-1">Limited Spots</span>
+                                <span class="text-primary fw-bold fs-5">$1,899</span>
+                            </div>
+                            <h4 class="fw-bold mb-2">Swiss Alps Hiking</h4>
+                            <p class="text-muted mb-3 fs-7"><i class="fa-solid fa-map-pin me-2 text-primary"></i>Zermatt, Switzerland (5 Days)</p>
+                            <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 py-2 w-100 d-sm-inline-block w-sm-auto hover-effect">Join Group <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card d-flex flex-column flex-sm-row bg-white p-3 p-md-4 shadow-sm rounded-4 align-items-sm-center">
+                        <div class="event-date bg-primary text-white text-center rounded-4 me-sm-4 mb-3 mb-sm-0 flex-shrink-0 d-flex flex-column justify-content-center align-items-center shadow-sm">
+                            <span class="fs-2 fw-bold lh-1">25</span>
+                            <span class="fs-6 text-uppercase tracking-wider">Mar</span>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-warning text-dark rounded-pill px-3 py-1">Filling Fast</span>
+                                <span class="text-primary fw-bold fs-5">$2,150</span>
+                            </div>
+                            <h4 class="fw-bold mb-2">Kyoto Cherry Blossom</h4>
+                            <p class="text-muted mb-3 fs-7"><i class="fa-solid fa-map-pin me-2 text-primary"></i>Kyoto, Japan (10 Days)</p>
+                            <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 py-2 w-100 d-sm-inline-block w-sm-auto hover-effect">Join Group <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card d-flex flex-column flex-sm-row bg-white p-3 p-md-4 shadow-sm rounded-4 align-items-sm-center">
+                        <div class="event-date bg-primary text-white text-center rounded-4 me-sm-4 mb-3 mb-sm-0 flex-shrink-0 d-flex flex-column justify-content-center align-items-center shadow-sm">
+                            <span class="fs-2 fw-bold lh-1">10</span>
+                            <span class="fs-6 text-uppercase tracking-wider">Dec</span>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-success text-white rounded-pill px-3 py-1">New Route</span>
+                                <span class="text-primary fw-bold fs-5">$950</span>
+                            </div>
+                            <h4 class="fw-bold mb-2">Northern Lights Trek</h4>
+                            <p class="text-muted mb-3 fs-7"><i class="fa-solid fa-map-pin me-2 text-primary"></i>TromsÃ¸, Norway (5 Days)</p>
+                            <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 py-2 w-100 d-sm-inline-block w-sm-auto hover-effect">Join Group <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 4 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="event-card d-flex flex-column flex-sm-row bg-white p-3 p-md-4 shadow-sm rounded-4 align-items-sm-center">
+                        <div class="event-date bg-primary text-white text-center rounded-4 me-sm-4 mb-3 mb-sm-0 flex-shrink-0 d-flex flex-column justify-content-center align-items-center shadow-sm">
+                            <span class="fs-2 fw-bold lh-1">14</span>
+                            <span class="fs-6 text-uppercase tracking-wider">Feb</span>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-info text-white rounded-pill px-3 py-1">Couples Special</span>
+                                <span class="text-primary fw-bold fs-5">$1,500</span>
+                            </div>
+                            <h4 class="fw-bold mb-2">Paris Romance Tour</h4>
+                            <p class="text-muted mb-3 fs-7"><i class="fa-solid fa-map-pin me-2 text-primary"></i>Paris, France (7 Days)</p>
+                            <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 py-2 w-100 d-sm-inline-block w-sm-auto hover-effect">Join Group <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Blog / News -->
+    <section class="blog-section py-5">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Travel Blog</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Latest Travel News & Tips</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Read our latest articles to find inspiration, travel guides, and exclusive tips for your next adventure.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card bg-white rounded-4 shadow-sm h-100 border-0 d-flex flex-column">
+                        <div class="blog-img-wrapper position-relative overflow-hidden rounded-top-4">
+                            <img src="assets/images/img_17.webp" class="img-fluid w-100 blog-img" alt="Blog 1">
+                            <div class="blog-date bg-primary text-white text-center position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-3 shadow-sm">
+                                <span class="fs-5 fw-bold d-block lh-1">12</span>
+                                <span class="fs-7 text-uppercase">Oct</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column flex-grow-1">
+                            <div class="blog-meta mb-3 text-muted fs-7">
+                                <span class="me-3"><i class="fa-regular fa-user text-primary me-1"></i> Admin</span>
+                                <span><i class="fa-regular fa-folder text-primary me-1"></i> Travel Hacks</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 blog-title"><a href="#" class="text-dark text-decoration-none">Top 10 Travel Hacks</a></h4>
+                            <p class="text-muted mb-4">Learn how to pack light, skip the long queues, and travel smart on your next big vacation.</p>
+                            <a href="#" class="read-more mt-auto text-primary text-decoration-none fw-bold text-uppercase fs-7 tracking-wider">Read Article <i class="fa-solid fa-arrow-right ms-2 transition-all"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card bg-white rounded-4 shadow-sm h-100 border-0 d-flex flex-column">
+                        <div class="blog-img-wrapper position-relative overflow-hidden rounded-top-4">
+                            <img src="assets/images/img_21.webp" class="img-fluid w-100 blog-img" alt="Blog 2">
+                            <div class="blog-date bg-primary text-white text-center position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-3 shadow-sm">
+                                <span class="fs-5 fw-bold d-block lh-1">28</span>
+                                <span class="fs-7 text-uppercase">Sep</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column flex-grow-1">
+                            <div class="blog-meta mb-3 text-muted fs-7">
+                                <span class="me-3"><i class="fa-regular fa-user text-primary me-1"></i> Editor</span>
+                                <span><i class="fa-regular fa-folder text-primary me-1"></i> Environment</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 blog-title"><a href="#" class="text-dark text-decoration-none">Sustainable Tourism</a></h4>
+                            <p class="text-muted mb-4">Discover simple and effective ways to reduce your carbon footprint while exploring the world.</p>
+                            <a href="#" class="read-more mt-auto text-primary text-decoration-none fw-bold text-uppercase fs-7 tracking-wider">Read Article <i class="fa-solid fa-arrow-right ms-2 transition-all"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card bg-white rounded-4 shadow-sm h-100 border-0 d-flex flex-column">
+                        <div class="blog-img-wrapper position-relative overflow-hidden rounded-top-4">
+                            <img src="assets/images/img_71.webp" class="img-fluid w-100 blog-img" alt="Blog 3">
+                            <div class="blog-date bg-primary text-white text-center position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-3 shadow-sm">
+                                <span class="fs-5 fw-bold d-block lh-1">15</span>
+                                <span class="fs-7 text-uppercase">Sep</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column flex-grow-1">
+                            <div class="blog-meta mb-3 text-muted fs-7">
+                                <span class="me-3"><i class="fa-regular fa-user text-primary me-1"></i> Guide</span>
+                                <span><i class="fa-regular fa-folder text-primary me-1"></i> Destinations</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 blog-title"><a href="#" class="text-dark text-decoration-none">Hidden Gems in Europe</a></h4>
+                            <p class="text-muted mb-4">Escape the crowds and discover these beautiful, untouched places off the beaten path in Europe.</p>
+                            <a href="#" class="read-more mt-auto text-primary text-decoration-none fw-bold text-uppercase fs-7 tracking-wider">Read Article <i class="fa-solid fa-arrow-right ms-2 transition-all"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Newsletter -->
+    <section class="newsletter-section py-5 pb-5">
+        <div class="container">
+            <div class="newsletter-card rounded-5 position-relative overflow-hidden shadow-lg p-4 p-md-5" data-aos="zoom-in" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);">
+                <!-- Decorative Elements Fixed Opacity -->
+                <i class="fa-regular fa-envelope position-absolute text-white fa-10x" style="top: -20px; right: -20px; transform: rotate(15deg); opacity: 0.05;"></i>
+                <i class="fa-regular fa-paper-plane position-absolute text-white fa-6x d-none d-md-block" style="bottom: 20px; left: 20px; transform: rotate(-15deg); opacity: 0.05;"></i>
+                
+                <div class="row align-items-center position-relative" style="z-index: 2;">
+                    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                        <h2 class="display-6 fw-bold mb-3 text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Get Updates & Exclusive Deals</h2>
+                        <p class="lead mb-0 text-white opacity-75" style="font-size: 1.1rem;">Subscribe to our newsletter to receive the latest travel news, tips, and exclusive discounts right in your inbox!</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="newsletter-form position-relative bg-white rounded-pill p-2 shadow d-flex align-items-center">
+                            <i class="fa-regular fa-envelope text-muted ms-3 ms-md-4 me-2"></i>
+                            <input type="email" class="form-control border-0 bg-transparent shadow-none px-2" placeholder="Enter your email address..." required style="font-size: 1rem;">
+                            <button type="submit" class="btn rounded-pill px-4 px-md-5 py-2 py-md-3 text-uppercase fw-bold tracking-wider flex-shrink-0 text-white" style="background-color: var(--secondary-color); font-size: 0.85rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Partners -->
+    <section class="partners-section py-5 bg-white text-center border-top overflow-hidden">
+        <div class="container mb-4">
+            <h6 class="text-primary text-uppercase fw-bold mb-0 tracking-wider fs-7">Trusted By Our Global Partners</h6>
+        </div>
+        
+        <div class="marquee-container position-relative">
+            <!-- Fade masks for edges -->
+            <div class="marquee-fade marquee-fade-left position-absolute top-0 start-0 h-100 z-1"></div>
+            <div class="marquee-fade marquee-fade-right position-absolute top-0 end-0 h-100 z-1"></div>
+            
+            <div class="marquee-content d-flex align-items-center">
+                <!-- Set 1 -->
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-aws fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-stripe fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-visa fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-airbnb fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-tripadvisor fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-mastercard fa-3x"></i></div>
+                <!-- Set 2 -->
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-aws fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-stripe fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-visa fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-airbnb fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-tripadvisor fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-mastercard fa-3x"></i></div>
+                <!-- Set 3 -->
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-aws fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-stripe fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-visa fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-airbnb fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-tripadvisor fa-3x"></i></div>
+                <div class="partner-icon mx-4 mx-md-5"><i class="fa-brands fa-cc-mastercard fa-3x"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

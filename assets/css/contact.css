@@ -1,0 +1,256 @@
+/* Contact Page Premium Styles - Emerald Nature Theme */
+:root {
+    --emerald-primary: #059669;
+    --emerald-secondary: #064e3b;
+    --emerald-light: #ecfdf5;
+    --emerald-dark: #022c22;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --shadow-soft: 0 8px 32px 0 rgba(5, 150, 105, 0.1);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+    background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section specific styling */
+.contact-info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #f0f9f6);
+    border-radius: 16px;
+}
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(5, 150, 105, 0.15);
+}
+
+.contact-info-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Form Styles */
+.premium-form .form-control {
+    border-radius: 10px;
+    border: 1px solid #d1fae5;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+.premium-form .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+    border-color: var(--emerald-primary);
+}
+.btn-emerald {
+    background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-secondary));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-emerald:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(5, 150, 105, 0.4);
+    color: white;
+}
+
+/* Map wrapper */
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0); /* For Safari rounded corners on iframe */
+}
+
+/* FAQ Accordion */
+.accordion-emerald .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.accordion-emerald .accordion-button {
+    border-radius: 12px !important;
+    background: white;
+    font-weight: 600;
+    color: var(--emerald-dark);
+}
+.accordion-emerald .accordion-button:not(.collapsed) {
+    background: var(--emerald-light);
+    color: var(--emerald-primary);
+    box-shadow: none;
+}
+.accordion-emerald .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Social Media Grid */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+.social-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: var(--emerald-dark);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-secondary));
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+.social-card:hover {
+    transform: translateY(-10px);
+    color: white;
+}
+.social-card:hover::before {
+    opacity: 1;
+}
+.social-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+.social-card:hover i {
+    color: white !important;
+}
+.social-card:hover small {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+/* Newsletter CTA */
+.newsletter-section {
+    background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-secondary));
+    position: relative;
+    overflow: hidden;
+}
+.newsletter-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+/* 320px Absolute Responsiveness */
+@media (max-width: 320px) {
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .row > * {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    .display-6 {
+        font-size: 1.75rem !important;
+    }
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    .newsletter-glass {
+        padding: 1.5rem 1rem;
+    }
+    .page-banner {
+        padding: 3rem 0;
+    }
+    h2, h4 {
+        font-size: 1.5rem;
+    }
+    .card-body, .glass-panel {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Branch Card */
+.branch-card {
+    transition: all 0.4s ease;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid rgba(5, 150, 105, 0.1);
+}
+.branch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(5, 150, 105, 0.1) !important;
+    border-color: rgba(5, 150, 105, 0.3);
+}
+.branch-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background: var(--emerald-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+.branch-card:hover .branch-icon-wrap {
+    background: var(--emerald-primary);
+    transform: scale(1.1);
+}
+.branch-card:hover .branch-icon-wrap i {
+    color: white !important;
+}
+
+/* Contact Info Card Hover Additions */
+.contact-icon-bg {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(5, 150, 105, 0.1);
+}
+.contact-info-card .contact-icon-bg i {
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+}
+.contact-info-card:hover .contact-icon-bg {
+    background-color: var(--emerald-primary);
+    transform: scale(1.15) rotate(5deg);
+}
+.contact-info-card:hover .contact-icon-bg i {
+    color: white !important;
+}

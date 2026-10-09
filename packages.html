@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Tour Operator</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logoStackly.webp" type="image/webp">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/packages.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- 1. Banner Section -->
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center text-white overflow-hidden" style="background: url('assets/images/img_73.webp') center/cover fixed;">
+        <!-- Premium Gradient Overlay -->
+        <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%); z-index: 1;"></div>
+        
+        <div class="container position-relative" style="z-index: 3; padding-top: 100px;">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <h6 class="text-uppercase fw-bold mb-3 tracking-wider text-primary bg-white d-inline-block px-3 py-1 rounded-pill shadow-sm">Curated Experiences</h6>
+            </div>
+            
+            <h1 class="display-2 fw-bold mb-4 text-shadow hero-spin-title text-white">Travel <span class="text-primary">Packages</span></h1>
+            
+            <p class="lead fw-light mx-auto mb-5 opacity-100 text-white" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="200">
+                Browse our wide range of meticulously planned travel packages suited for families, couples, and solo adventurers.
+            </p>
+            
+            <div data-aos="zoom-in" data-aos-delay="400" class="mb-5 pb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center glass-breadcrumb d-inline-flex px-4 py-3 rounded-pill shadow-lg mb-0" style="background: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none fw-bold hover-primary transition-all"><i class="fa-solid fa-house me-2 text-primary"></i>Home</a></li>
+                        <li class="breadcrumb-item active fw-bold text-white-50" aria-current="page">Packages</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#search" class="scroll-down-btn position-absolute text-white transition-all" style="bottom: 80px; z-index: 4;">
+            <i class="fa-solid fa-chevron-down fa-2x animate-bounce"></i>
+        </a>
+
+        <!-- Custom SVG Shape Divider -->
+        <div class="custom-shape-divider-bottom position-absolute bottom-0 start-0 w-100" style="z-index: 2; line-height: 0;">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px; fill: #ffffff;">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 2. Search & Filter -->
+    <section class=" py-5 position-relative z-3 bg-white">
+        <div class="container">
+            <div class="glass-search-box mx-auto p-4 p-md-5 rounded-5 shadow-lg border border-white" data-aos="fade-up" style="max-width: 1100px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px);">
+                <form class="row g-4 align-items-end">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label class="form-label text-primary fs-7 fw-bold text-uppercase tracking-wider mb-2"><i class="fa-solid fa-location-dot me-2"></i>Destination</label>
+                        <div class="input-group-custom position-relative">
+                            <select class="form-select border-0 bg-light rounded-pill px-4 py-3 shadow-sm text-dark fw-medium cursor-pointer transition-all hover-shadow">
+                                <option selected>Anywhere</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                                <option>Americas</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label class="form-label text-primary fs-7 fw-bold text-uppercase tracking-wider mb-2"><i class="fa-solid fa-compass me-2"></i>Tour Type</label>
+                        <div class="input-group-custom position-relative">
+                            <select class="form-select border-0 bg-light rounded-pill px-4 py-3 shadow-sm text-dark fw-medium cursor-pointer transition-all hover-shadow">
+                                <option selected>All Types</option>
+                                <option>Luxury</option>
+                                <option>Adventure</option>
+                                <option>Family</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label class="form-label text-primary fs-7 fw-bold text-uppercase tracking-wider mb-2"><i class="fa-solid fa-calendar-days me-2"></i>Duration</label>
+                        <div class="input-group-custom position-relative">
+                            <select class="form-select border-0 bg-light rounded-pill px-4 py-3 shadow-sm text-dark fw-medium cursor-pointer transition-all hover-shadow">
+                                <option selected>Any Duration</option>
+                                <option>1-3 Days</option>
+                                <option>4-7 Days</option>
+                                <option>8+ Days</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 mt-4 mt-lg-0">
+                        <button type="submit" class="btn custom-btn custom-btn-primary rounded-pill w-100 py-3 fw-bold text-uppercase shadow-lg hover-lift d-flex align-items-center justify-content-center search-btn">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i> Find Tours
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Luxury Packages -->
+    <section class="py-5 bg-light position-relative">
+        <div class="container">
+            <div class="row mb-5 align-items-end" data-aos="fade-up">
+                <div class="col-md-8">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Premium Selection</h6>
+                    <h2 class="display-6 fw-bold text-secondary mb-0">Luxury Escapes</h2>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-primary fw-bold text-decoration-none btn btn-link hover-primary transition-all">View All Luxury <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Package 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="luxury-package-card rounded-5 overflow-hidden position-relative shadow-sm transition-all bg-white h-100 border border-light">
+                        <div class="card-img-top position-relative overflow-hidden luxury-img-wrapper">
+                            <img src="assets/images/img_74.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all" alt="Resort">
+                            <div class="position-absolute top-0 end-0 m-3 z-2">
+                                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold shadow-sm border border-white"><i class="fa-solid fa-star me-1"></i> Best Seller</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 z-2 text-white luxury-gradient-overlay">
+                                <h4 class="fw-bold mb-1 text-shadow text-white">Maldives Overwater Villa</h4>
+                                <div class="d-flex align-items-center text-white-75 fs-7">
+                                    <i class="fa-solid fa-location-dot me-2 text-primary"></i> The Maldives
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 position-relative z-3 bg-white">
+                            <div class="price-bubble bg-primary text-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center position-absolute border border-3 border-white transition-all">
+                                <span class="fs-7 fw-normal opacity-75" style="line-height: 1;">From</span>
+                                <span class="fw-bold fs-5" style="line-height: 1;">$3.4k</span>
+                            </div>
+                            <div class="d-flex gap-3 mb-3 pb-3 border-bottom border-light w-75">
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-clock text-primary me-1"></i> 7 Days</div>
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-user-group text-primary me-1"></i> 2 Pax</div>
+                            </div>
+                            <p class="text-muted fs-7 mb-4">Experience ultimate luxury in a private overwater villa with a personal butler and panoramic ocean views.</p>
+                            <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill w-100 py-2 fw-bold hover-lift transition-all">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="luxury-package-card rounded-5 overflow-hidden position-relative shadow-sm transition-all bg-white h-100 border border-light">
+                        <div class="card-img-top position-relative overflow-hidden luxury-img-wrapper">
+                            <img src="assets/images/img_75.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all" alt="Bora Bora">
+                            <div class="position-absolute top-0 end-0 m-3 z-2">
+                                <span class="badge bg-info text-white px-3 py-2 rounded-pill fw-bold shadow-sm border border-white"><i class="fa-solid fa-fire me-1"></i> New</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 z-2 text-white luxury-gradient-overlay">
+                                <h4 class="fw-bold mb-1 text-shadow text-white">Bora Bora Retreat</h4>
+                                <div class="d-flex align-items-center text-white-75 fs-7">
+                                    <i class="fa-solid fa-location-dot me-2 text-primary"></i> French Polynesia
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 position-relative z-3 bg-white">
+                            <div class="price-bubble bg-primary text-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center position-absolute border border-3 border-white transition-all">
+                                <span class="fs-7 fw-normal opacity-75" style="line-height: 1;">From</span>
+                                <span class="fw-bold fs-5" style="line-height: 1;">$4.2k</span>
+                            </div>
+                            <div class="d-flex gap-3 mb-3 pb-3 border-bottom border-light w-75">
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-clock text-primary me-1"></i> 10 Days</div>
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-spa text-primary me-1"></i> Spa</div>
+                            </div>
+                            <p class="text-muted fs-7 mb-4">Crystal clear waters, daily spa treatments, and private sunset dinner cruises included.</p>
+                            <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill w-100 py-2 fw-bold hover-lift transition-all">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="col-lg-4 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    <div class="luxury-package-card rounded-5 overflow-hidden position-relative shadow-sm transition-all bg-white h-100 border border-light">
+                        <div class="card-img-top position-relative overflow-hidden luxury-img-wrapper">
+                            <img src="assets/images/img_76.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all" alt="Swiss Alps">
+                            <div class="position-absolute top-0 end-0 m-3 z-2">
+                                <span class="badge bg-danger text-white px-3 py-2 rounded-pill fw-bold shadow-sm border border-white"><i class="fa-solid fa-bolt me-1"></i> Limited</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 z-2 text-white luxury-gradient-overlay">
+                                <h4 class="fw-bold mb-1 text-shadow text-white">Swiss Alps Luxury Ski</h4>
+                                <div class="d-flex align-items-center text-white-75 fs-7">
+                                    <i class="fa-solid fa-location-dot me-2 text-primary"></i> Switzerland
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 position-relative z-3 bg-white">
+                            <div class="price-bubble bg-primary text-white rounded-circle shadow-lg d-flex flex-column align-items-center justify-content-center position-absolute border border-3 border-white transition-all">
+                                <span class="fs-7 fw-normal opacity-75" style="line-height: 1;">From</span>
+                                <span class="fw-bold fs-5" style="line-height: 1;">$2.8k</span>
+                            </div>
+                            <div class="d-flex gap-3 mb-3 pb-3 border-bottom border-light w-75">
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-clock text-primary me-1"></i> 5 Days</div>
+                                <div class="text-muted fs-7 fw-medium"><i class="fa-solid fa-snowflake text-primary me-1"></i> Skiing</div>
+                            </div>
+                            <p class="text-muted fs-7 mb-4">Five-star luxury chalet accommodation featuring a private chef and exclusive ski instructors.</p>
+                            <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill w-100 py-2 fw-bold hover-lift transition-all">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Family Packages -->
+    <section class="py-5 bg-white position-relative">
+        <div class="container">
+            <div class="row mb-5 align-items-end" data-aos="fade-up">
+                <div class="col-md-8">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Kid-Friendly</h6>
+                    <h2 class="display-6 fw-bold text-secondary mb-0">Family Adventures</h2>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-primary fw-bold text-decoration-none btn btn-link hover-primary transition-all">View All Family <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Family Card 1 -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="family-card position-relative border-0 bg-transparent h-100">
+                        <div class="row g-0 h-100 align-items-center">
+                            <!-- Image Column -->
+                            <div class="col-12 col-sm-5 col-md-6 family-img-col position-relative z-1">
+                                <img src="assets/images/img_16.webp" class="img-fluid w-100 h-100 object-fit-cover rounded-5 shadow-lg family-img" alt="Orlando">
+                            </div>
+                            <!-- Content Column Overlapping -->
+                            <div class="col-12 col-sm-7 col-md-6 position-relative z-2 family-content-col">
+                                <div class="bg-light rounded-4 p-4 p-lg-5 shadow-lg w-100 family-content-box border border-white">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-medium shadow-sm"><i class="fa-solid fa-location-dot me-1"></i> Orlando</span>
+                                        <span class="fw-bold text-dark fs-5">$1.2k<span class="fs-7 text-muted fw-normal">/pp</span></span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3 text-secondary">Magic Theme Park Tour</h4>
+                                    
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="text-muted fs-7 mb-2"><i class="fa-solid fa-check text-primary me-2"></i>5 Days unlimited access</li>
+                                        <li class="text-muted fs-7 mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Luxury family suites</li>
+                                        <li class="text-muted fs-7"><i class="fa-solid fa-check text-primary me-2"></i>Character breakfast</li>
+                                    </ul>
+                                    
+                                    <a href="#" class="btn custom-btn custom-btn-primary rounded-pill w-100 py-2 fw-bold hover-lift shadow-sm">Explore Tour <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Card 2 -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="family-card position-relative border-0 bg-transparent h-100">
+                        <div class="row g-0 h-100 align-items-center">
+                            <!-- Image Column -->
+                            <div class="col-12 col-sm-5 col-md-6 family-img-col position-relative z-1">
+                                <img src="assets/images/img_18.webp" class="img-fluid w-100 h-100 object-fit-cover rounded-5 shadow-lg family-img" alt="Safari">
+                            </div>
+                            <!-- Content Column Overlapping -->
+                            <div class="col-12 col-sm-7 col-md-6 position-relative z-2 family-content-col">
+                                <div class="bg-light rounded-4 p-4 p-lg-5 shadow-lg w-100 family-content-box border border-white">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-medium shadow-sm"><i class="fa-solid fa-location-dot me-1"></i> Kenya</span>
+                                        <span class="fw-bold text-dark fs-5">$2.1k<span class="fs-7 text-muted fw-normal">/pp</span></span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3 text-secondary">Family Safari Explorer</h4>
+                                    
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="text-muted fs-7 mb-2"><i class="fa-solid fa-check text-primary me-2"></i>7 Days wildlife spotting</li>
+                                        <li class="text-muted fs-7 mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Safe, fenced lodges</li>
+                                        <li class="text-muted fs-7"><i class="fa-solid fa-check text-primary me-2"></i>Expert child guides</li>
+                                    </ul>
+                                    
+                                    <a href="#" class="btn custom-btn custom-btn-primary rounded-pill w-100 py-2 fw-bold hover-lift shadow-sm">Explore Tour <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Honeymoon / Couples -->
+    <section class="py-5 position-relative text-white overflow-hidden">
+        <!-- Deep blurred background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_77.webp') center/cover;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(10, 20, 30, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);"></div>
+        
+        <div class="container position-relative z-3">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-warning text-uppercase fw-bold mb-3 tracking-wider d-inline-block border border-warning rounded-pill px-4 py-1">Romantic Getaways</h6>
+                    <h2 class="display-6 fw-bold text-white mb-3">Honeymoon <span class="fw-light fst-italic text-warning">&</span> Couples</h2>
+                    <p class="lead text-white-50 mx-auto" style="max-width: 600px;">Intimate, unforgettable experiences designed perfectly for two.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="romantic-card rounded-5 overflow-hidden position-relative h-100 shadow-lg border border-white border-opacity-10 transition-all cursor-pointer">
+                        <img src="assets/images/img_78.webp" class="img-fluid w-100 h-100 romantic-img object-fit-cover transition-all" alt="Beach Dinner">
+                        
+                        <!-- Floating Glass Info -->
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3 p-md-4 z-2 transition-all romantic-glass-box">
+                            <div class="rounded-4 p-4 text-center border border-white border-opacity-10 transition-all romantic-panel" style="background: rgba(20, 20, 20, 0.75); backdrop-filter: blur(12px);">
+                                <i class="fa-solid fa-heart fa-2x text-warning mb-3 romantic-icon transition-all"></i>
+                                <h3 class="fw-bold text-white mb-2 font-serif">Bali Private Villa</h3>
+                                <p class="text-white-50 fs-7 mb-4">Candlelight dinners on the beach, private spa days, and total sanctuary.</p>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill fw-bold px-4 hover-lift">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="romantic-card rounded-5 overflow-hidden position-relative h-100 shadow-lg border border-white border-opacity-10 transition-all cursor-pointer">
+                        <img src="assets/images/img_37.webp" class="img-fluid w-100 h-100 romantic-img object-fit-cover transition-all" alt="Paris Romance">
+                        
+                        <!-- Floating Glass Info -->
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3 p-md-4 z-2 transition-all romantic-glass-box">
+                            <div class="rounded-4 p-4 text-center border border-white border-opacity-10 transition-all romantic-panel" style="background: rgba(20, 20, 20, 0.75); backdrop-filter: blur(12px);">
+                                <i class="fa-solid fa-champagne-glasses fa-2x text-warning mb-3 romantic-icon transition-all"></i>
+                                <h3 class="fw-bold text-white mb-2 font-serif">Parisian Romance</h3>
+                                <p class="text-white-50 fs-7 mb-4">Exclusive Seine river cruises, Michelin-star dining, and Eiffel Tower views.</p>
+                                <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill fw-bold px-4 hover-lift">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Adventure & Trekking -->
+    <section class="py-5 bg-light position-relative">
+        <div class="container position-relative z-2">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Thrill Seekers</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Adventure & Trekking</h2>
+                </div>
+            </div>
+            
+            <!-- Grid Layout (No Horizontal Scroll) -->
+            <div class="row g-4">
+                <!-- Card 1 (Hiking) -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="adventure-card bg-white rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+                        <div class="overflow-hidden position-relative" style="height: 250px;">
+                            <img src="assets/images/img_79.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all adv-img" alt="Hiking">
+                            <div class="adv-gradient position-absolute bottom-0 start-0 w-100 h-50"></div>
+                        </div>
+                        <div class="p-4 position-relative z-2 bg-white adv-content transition-all">
+                            <span class="badge bg-dark text-white rounded-pill px-3 py-1 mb-3 position-absolute" style="top: -20px; left: 24px; border: 2px solid white;"><i class="fa-solid fa-mountain me-1 text-warning"></i> Peru</span>
+                            <h5 class="fw-bold mb-1 mt-2 text-dark">Inca Trail Hike</h5>
+                            <p class="text-muted fs-7 mb-3"><i class="fa-solid fa-clock me-1"></i> 4 Days</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold fs-5">$899</span>
+                                <a href="#" class="btn custom-btn custom-btn-outlined btn-sm rounded-circle d-flex justify-content-center align-items-center transition-all adv-btn" style="width:36px; height:36px; padding:0;"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 (Scuba) -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="adventure-card bg-white rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+                        <div class="overflow-hidden position-relative" style="height: 250px;">
+                            <img src="assets/images/img_80.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all adv-img" alt="Scuba">
+                            <div class="adv-gradient position-absolute bottom-0 start-0 w-100 h-50"></div>
+                        </div>
+                        <div class="p-4 position-relative z-2 bg-white adv-content transition-all">
+                            <span class="badge bg-dark text-white rounded-pill px-3 py-1 mb-3 position-absolute" style="top: -20px; left: 24px; border: 2px solid white;"><i class="fa-solid fa-water me-1 text-info"></i> Australia</span>
+                            <h5 class="fw-bold mb-1 mt-2 text-dark">Great Barrier Reef</h5>
+                            <p class="text-muted fs-7 mb-3"><i class="fa-solid fa-clock me-1"></i> 3 Days</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold fs-5">$650</span>
+                                <a href="#" class="btn custom-btn custom-btn-outlined btn-sm rounded-circle d-flex justify-content-center align-items-center transition-all adv-btn" style="width:36px; height:36px; padding:0;"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 (Mountaineering) -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="adventure-card bg-white rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+                        <div class="overflow-hidden position-relative" style="height: 250px;">
+                            <img src="assets/images/img_81.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all adv-img" alt="Mountaineering">
+                            <div class="adv-gradient position-absolute bottom-0 start-0 w-100 h-50"></div>
+                        </div>
+                        <div class="p-4 position-relative z-2 bg-white adv-content transition-all">
+                            <span class="badge bg-dark text-white rounded-pill px-3 py-1 mb-3 position-absolute" style="top: -20px; left: 24px; border: 2px solid white;"><i class="fa-solid fa-flag me-1 text-danger"></i> Tanzania</span>
+                            <h5 class="fw-bold mb-1 mt-2 text-dark">Kilimanjaro Climb</h5>
+                            <p class="text-muted fs-7 mb-3"><i class="fa-solid fa-clock me-1"></i> 7 Days</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold fs-5">$1,499</span>
+                                <a href="#" class="btn custom-btn custom-btn-outlined btn-sm rounded-circle d-flex justify-content-center align-items-center transition-all adv-btn" style="width:36px; height:36px; padding:0;"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 (Kayaking) -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="adventure-card bg-white rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+                        <div class="overflow-hidden position-relative" style="height: 250px;">
+                            <img src="assets/images/img_82.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all adv-img" alt="Kayaking">
+                            <div class="adv-gradient position-absolute bottom-0 start-0 w-100 h-50"></div>
+                        </div>
+                        <div class="p-4 position-relative z-2 bg-white adv-content transition-all">
+                            <span class="badge bg-dark text-white rounded-pill px-3 py-1 mb-3 position-absolute" style="top: -20px; left: 24px; border: 2px solid white;"><i class="fa-solid fa-anchor me-1 text-info"></i> Chile</span>
+                            <h5 class="fw-bold mb-1 mt-2 text-dark">Patagonia Kayak</h5>
+                            <p class="text-muted fs-7 mb-3"><i class="fa-solid fa-clock me-1"></i> 5 Days</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold fs-5">$999</span>
+                                <a href="#" class="btn custom-btn custom-btn-outlined btn-sm rounded-circle d-flex justify-content-center align-items-center transition-all adv-btn" style="width:36px; height:36px; padding:0;"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. What's Included -->
+    <section class="py-5 position-relative text-center bg-white overflow-hidden">
+        <!-- Decorative abstract shape -->
+        <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 z-1" style="background: radial-gradient(circle, rgba(5,150,105,0.05) 0%, transparent 70%); pointer-events: none;"></div>
+        <div class="container position-relative z-2">
+            <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">The Standard</h6>
+            <h2 class="display-6 fw-bold text-secondary mb-5">What Is Included</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="included-box p-4 p-lg-5 bg-white rounded-circle shadow-sm h-100 transition-all mx-auto border border-light d-flex flex-column align-items-center justify-content-center aspect-square position-relative z-3" style="max-width: 250px; aspect-ratio: 1/1;">
+                        <div class="icon-circle icon-bg-light text-primary rounded-circle d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-plane-arrival fa-2x"></i>
+                        </div>
+                        <h6 class="fw-bold m-0 text-dark transition-all title-text">Flights & Transfers</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="included-box p-4 p-lg-5 bg-white rounded-circle shadow-sm h-100 transition-all mx-auto border border-light d-flex flex-column align-items-center justify-content-center aspect-square position-relative z-3" style="max-width: 250px; aspect-ratio: 1/1;">
+                        <div class="icon-circle icon-bg-light text-primary rounded-circle d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-bed fa-2x"></i>
+                        </div>
+                        <h6 class="fw-bold m-0 text-dark transition-all title-text">4-5 Star Hotels</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="included-box p-4 p-lg-5 bg-white rounded-circle shadow-sm h-100 transition-all mx-auto border border-light d-flex flex-column align-items-center justify-content-center aspect-square position-relative z-3" style="max-width: 250px; aspect-ratio: 1/1;">
+                        <div class="icon-circle icon-bg-light text-primary rounded-circle d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-utensils fa-2x"></i>
+                        </div>
+                        <h6 class="fw-bold m-0 text-dark transition-all title-text">Daily Breakfast</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="included-box p-4 p-lg-5 bg-white rounded-circle shadow-sm h-100 transition-all mx-auto border border-light d-flex flex-column align-items-center justify-content-center aspect-square position-relative z-3" style="max-width: 250px; aspect-ratio: 1/1;">
+                        <div class="icon-circle icon-bg-light text-primary rounded-circle d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-map-location-dot fa-2x"></i>
+                        </div>
+                        <h6 class="fw-bold m-0 text-dark transition-all title-text">Guided Tours</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Custom Itineraries -->
+    <section class="py-5 bg-light position-relative overflow-hidden">
+        <div class="container position-relative z-2">
+            <div class="row align-items-center bg-white rounded-5 shadow-lg p-0 mx-0 overflow-hidden custom-itinerary-card" data-aos="fade-up">
+                <!-- Text Column (Reversed on mobile) -->
+                <div class="col-12 col-lg-6 p-4 p-md-5 order-2 order-lg-1 custom-text-col">
+                    <div class="pe-lg-4 custom-text-wrap">
+                        <h6 class="text-white text-uppercase fw-bold mb-3 tracking-wider d-inline-block bg-primary bg-opacity-10 rounded-pill px-3 py-1">Bespoke Travel</h6>
+                        <h2 class="display-6 fw-bold mb-4 text-dark">Want a Custom Itinerary?</h2>
+                        <p class="text-muted mb-4 fs-6">Don't see exactly what you're looking for? Our elite travel experts can build a completely custom package tailored precisely to your schedule, budget, and dreams.</p>
+                        <ul class="list-unstyled mb-5 text-muted custom-list">
+                            <li class="mb-3 d-flex align-items-center"><div class="icon-check-wrap bg-primary text-white rounded-circle me-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-check"></i></div> <span>Dedicated Travel Concierge</span></li>
+                            <li class="mb-3 d-flex align-items-center"><div class="icon-check-wrap bg-primary text-white rounded-circle me-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-check"></i></div> <span>Hand-picked Accommodations</span></li>
+                            <li class="mb-3 d-flex align-items-center"><div class="icon-check-wrap bg-primary text-white rounded-circle me-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-check"></i></div> <span>Flexible Private Scheduling</span></li>
+                        </ul>
+                        <a href="contact.html" class="btn custom-btn custom-btn-primary rounded-pill px-5 py-3 fw-bold hover-lift shadow-sm w-100 w-sm-auto d-inline-flex justify-content-center align-items-center custom-btn">Request Custom Quote <i class="fa-solid fa-paper-plane ms-2"></i></a>
+                    </div>
+                </div>
+                <!-- Image Column (Shows on top on mobile) -->
+                <div class="col-12 col-lg-6 p-0 custom-img-col position-relative order-1 order-lg-2 h-100">
+                    <img src="assets/images/img_83.webp" class="img-fluid w-100 h-100 object-fit-cover transition-all" alt="Custom Travel">
+                    <!-- Overlapping Decorative Element -->
+                    <div class="position-absolute bottom-0 start-0 m-3 m-md-4 custom-float-badge">
+                        <div class="bg-white p-2 p-md-3 rounded-4 shadow-lg d-flex align-items-center gap-3 transition-all">
+                            <div class="text-primary fs-4 fs-md-3"><i class="fa-solid fa-headset"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark fs-7 fs-md-6">24/7 Support</h6>
+                                <p class="text-muted fs-8 fs-md-7 mb-0">Always here for you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CTA -->
+    <section class="position-relative text-white overflow-hidden parallax-section cta-section-wrapper" style="padding: 100px 0;">
+        <div class="parallax-bg position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_84.webp') center/cover;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75" style="mix-blend-mode: multiply;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 100%);"></div>
+        
+        <div class="container position-relative z-3 text-center" data-aos="zoom-in">
+            <div class="glass-box d-inline-block p-4 p-md-5 rounded-5 shadow-lg border border-white border-opacity-25 w-100 cta-glass-panel" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(15px); max-width: 800px;">
+                <div class="bg-white text-primary rounded-circle mx-auto d-flex align-items-center justify-content-center mb-4 shadow-lg cta-icon-ring" style="width: 70px; height: 70px;">
+                    <i class="fa-solid fa-phone-volume fa-2x"></i>
+                </div>
+                <h2 class="display-6 fw-bold mb-3 text-white cta-title">Need Help Choosing?</h2>
+                <p class="lead mb-4 mb-md-5 text-white opacity-75 mx-auto fs-6 fs-md-5" style="max-width: 600px;">Call us anytime at <span class="fw-bold text-warning">+91 9876543210</span> and our travel concierge will guide you to your perfect package.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="tel:+919876543210" class="btn custom-btn custom-btn-secondary rounded-pill px-5 py-3 fw-bold text-dark hover-lift shadow-lg"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                    <a href="contact.html" class="btn custom-btn custom-btn-outlined rounded-pill px-5 py-3 fw-bold hover-lift"><i class="fa-solid fa-envelope me-2"></i>Message Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Custom Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof gsap !== 'undefined') {
+                gsap.fromTo(".hero-spin-title", 
+                    { opacity: 0, scale: 0.2, rotation: -180 }, 
+                    { opacity: 1, scale: 1, rotation: 0, duration: 1.2, delay: 0.2, ease: "back.out(1.7)" }
+                );
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

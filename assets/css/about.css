@@ -1,0 +1,421 @@
+/* About Page Custom CSS */
+.page-banner {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.about-image-grid {
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+.about-img-1 {
+    position: relative;
+    z-index: 1;
+}
+.about-img-2 {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 60%;
+    z-index: 2;
+    border: 8px solid #fff;
+}
+.mission-card:hover .card-glow {
+    opacity: 1 !important;
+}
+.mission-card:hover i, .mission-card:hover h3, .mission-card:hover p {
+    color: #fff !important;
+}
+.hover-lift {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+.team-card {
+    transition: all 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+    background: #fff !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
+}
+.hover-primary {
+    transition: color 0.3s ease;
+}
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+.award-card:hover {
+    background: rgba(255, 193, 7, 0.1) !important;
+    transform: scale(1.05);
+}
+.rounded-top-left-4 {
+    border-top-left-radius: 1.5rem;
+}
+
+/* About Page Mobile Responsive */
+@media (max-width: 991px) {
+    .about-image-grid {
+        padding: 0;
+    }
+}
+@media (max-width: 768px) {
+    .page-banner {
+        background-attachment: scroll !important;
+    }
+}
+@media (max-width: 320px) {
+    .page-banner h1.display-3 {
+        font-size: 32px;
+    }
+    .page-banner .lead {
+        font-size: 14px;
+    }
+    h2.display-6 {
+        font-size: 24px;
+    }
+    h2.display-4 {
+        font-size: 32px !important;
+    }
+    .about-image-grid img {
+        border-radius: 10px !important;
+    }
+    .mission-card {
+        padding: 20px !important;
+    }
+    .mission-card h3 {
+        font-size: 20px;
+    }
+    .mission-card p {
+        font-size: 14px;
+    }
+    .hover-lift {
+        padding: 20px !important;
+    }
+    .team-card {
+        padding: 20px !important;
+    }
+    .award-card {
+        padding: 20px !important;
+    }
+}
+
+/* Stats Section (About Page) */
+.stat-glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.stat-glass-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+.stat-number {
+    font-size: 3.5rem;
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 320px) {
+    .stat-glass-card {
+        padding: 15px 10px !important;
+    }
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    .stat-icon-wrapper {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .stat-icon-wrapper i {
+        font-size: 1.2em;
+    }
+    .stat-glass-card p {
+        font-size: 10px !important;
+    }
+    .stat-glass-card span {
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Team Elite Section (About Page) */
+.team-card-elite {
+    margin-top: 60px; /* Space for the floating image */
+}
+.team-card-elite:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1) !important;
+}
+.team-img-wrapper img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-top: -70px; /* Pull it up exactly half its height */
+    transition: transform 0.5s ease;
+}
+.team-card-elite:hover .team-img-wrapper img {
+    transform: scale(1.1);
+    border-color: rgba(var(--bs-primary-rgb), 0.2) !important;
+}
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.social-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* 320px Responsiveness */
+@media (max-width: 320px) {
+    .team-img-wrapper img {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+    }
+    .team-info {
+        padding-top: 40px !important;
+    }
+    .team-card-elite h4 {
+        font-size: 20px;
+    }
+    .team-card-elite p {
+        font-size: 12px !important;
+    }
+    .social-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Portrait Card Design */
+.team-portrait-card {
+    height: 450px !important;
+    cursor: pointer;
+}
+.team-portrait-img {
+    transform: scale(1.05);
+}
+.portrait-hidden-content {
+    max-height: 0;
+    opacity: 0;
+}
+.team-portrait-card:hover .team-portrait-img {
+    transform: scale(1.1);
+}
+.team-portrait-card:hover .portrait-overlay {
+    height: 100% !important;
+    background: rgba(6,78,59,0.85) !important;
+    justify-content: center !important;
+}
+.team-portrait-card:hover .portrait-hidden-content {
+    max-height: 200px;
+    opacity: 1;
+}
+
+@media (max-width: 320px) {
+    .team-portrait-card {
+        height: 350px !important;
+    }
+}
+
+/* Award Plaque Design */
+.award-plaque {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(251, 191, 36, 0.1);
+    backdrop-filter: blur(10px);
+}
+.award-plaque:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(251, 191, 36, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(251, 191, 36, 0.1) !important;
+}
+.award-icon-box {
+    width: 90px;
+    height: 90px;
+}
+.award-plaque:hover .award-icon-box {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(251, 191, 36, 0.2) !important;
+}
+
+@keyframes ping {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+.ping-animation {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* 320px Responsiveness */
+@media (max-width: 320px) {
+    .award-plaque {
+        padding: 20px 15px !important;
+    }
+    .award-icon-box {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px !important;
+    }
+    .award-icon-box i {
+        font-size: 2em;
+    }
+    .award-plaque h5 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Sustainability Section (About Page) */
+.sustainability-images {
+    padding: 20px 0 40px 20px; /* Space for the overlapping elements */
+}
+.icon-pulse {
+    animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(var(--bs-primary-rgb), 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(var(--bs-primary-rgb), 0); }
+    100% { box-shadow: 0 0 0 0 rgba(var(--bs-primary-rgb), 0); }
+}
+.impact-badge {
+    animation: float-y 4s ease-in-out infinite;
+}
+
+/* 320px Responsiveness for Sustainability */
+@media (max-width: 576px) {
+    .secondary-img {
+        width: 60% !important;
+        transform: translate(0, 10%) !important;
+        right: 0 !important;
+    }
+    .main-img {
+        width: 85% !important;
+    }
+    .impact-badge {
+        padding: 15px !important;
+        left: -10px !important;
+        transform: translateY(-50%) scale(0.85) !important;
+    }
+}
+@media (max-width: 320px) {
+    .sustainability-images {
+        padding: 0 0 30px 0;
+    }
+    .impact-badge {
+        top: 0 !important;
+        transform: translate(0, -30%) scale(0.7) !important;
+        border-start: none !important;
+        border-bottom: 4px solid var(--primary-color) !important;
+        width: 100%;
+        position: relative !important;
+        margin-bottom: 20px;
+    }
+    .secondary-img {
+        display: none !important; /* Hide secondary image on tiny 320px to save space and prevent overflow */
+    }
+    .main-img {
+        width: 100% !important;
+    }
+}
+
+/* Desktop default positioning for Sustainability Images */
+.main-img {
+    position: relative;
+}
+.secondary-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform: translate(10%, 20%);
+}
+.impact-badge {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Single Image Impact Badge Layout */
+.impact-badge-single {
+    animation: float-y 4s ease-in-out infinite;
+}
+@media (max-width: 576px) {
+    .impact-badge-single {
+        padding: 15px !important;
+        transform: scale(0.9);
+        transform-origin: bottom right;
+    }
+}
+@media (max-width: 320px) {
+    .impact-badge-single {
+        position: relative !important;
+        width: 100%;
+        margin-top: -30px;
+        transform: scale(0.95);
+        transform-origin: center;
+        border-bottom: 4px solid var(--primary-color) !important;
+    }
+}
+
+/* Global Offices Section */
+.office-card:hover {
+    transform: translateY(-10px);
+    border-color: transparent !important;
+    box-shadow: 0 15px 35px rgba(var(--bs-primary-rgb), 0.2) !important;
+}
+.office-card:hover .office-bg {
+    opacity: 1;
+    transform: scale(1.05);
+}
+.office-card:hover .office-icon-wrap {
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    transform: scale(1.1);
+}
+.office-card:hover .office-title,
+.office-card:hover .office-subtitle {
+    color: white !important;
+}
+
+/* 320px Specific overrides for Offices */
+@media (max-width: 320px) {
+    .office-card {
+        padding: 20px !important;
+    }
+    .office-icon-wrap {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 15px !important;
+    }
+    .office-title {
+        font-size: 1.1rem;
+    }
+}

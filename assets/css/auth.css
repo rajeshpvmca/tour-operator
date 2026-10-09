@@ -1,0 +1,206 @@
+/* Authentication Pages - Emerald Nature Theme */
+
+/* Banner Styling */
+.auth-banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.auth-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.8), rgba(2, 44, 34, 0.9));
+}
+
+.auth-banner-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+/* Custom Primary Button */
+.custom-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+.custom-btn-primary {
+    background: var(--primary-color, #059669);
+    color: white;
+}
+.custom-btn-primary:hover {
+    background: var(--secondary-color, #064e3b);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(5, 150, 105, 0.2);
+}
+.custom-btn-secondary {
+    background: transparent;
+    color: var(--primary-color, #059669);
+}
+.custom-btn-secondary:hover {
+    color: var(--secondary-color, #064e3b);
+}
+
+/* Forms */
+.form-control {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.form-control:focus {
+    border-color: var(--primary-color, #059669);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Role Cards */
+.role-card-input {
+    display: none;
+}
+.role-card-label {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+.role-card-label i {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+.role-card-input:checked + .role-card-label {
+    border-color: var(--primary-color, #059669);
+    background-color: rgba(5, 150, 105, 0.05);
+    color: var(--primary-color, #059669);
+    font-weight: bold;
+}
+.role-card-input:checked + .role-card-label i {
+    color: var(--primary-color, #059669);
+}
+.role-card-label:hover {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+}
+
+/* Password Toggle */
+.toggle-password {
+    cursor: pointer;
+    color: #94a3b8;
+    transition: color 0.3s;
+}
+.toggle-password:hover {
+    color: var(--primary-color, #059669);
+}
+
+/* Text & Utilities overrides to guarantee emerald theme */
+.text-primary {
+    color: var(--primary-color, #059669) !important;
+}
+.bg-primary {
+    background-color: var(--primary-color, #059669) !important;
+}
+.bg-light {
+    background-color: #f8fafc !important;
+}
+.transition-hover {
+    transition: all 0.3s ease;
+}
+.transition-hover:hover {
+    color: var(--secondary-color, #064e3b) !important;
+}
+
+/* Input Icons Fix */
+.position-relative .input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    z-index: 4;
+}
+.custom-input {
+    padding-left: 45px !important;
+}
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    z-index: 4;
+    padding: 0;
+}
+
+/* Back Button Top Position */
+.back-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 10;
+    background: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+.back-btn:hover {
+    background: var(--emerald-light, #ecfdf5);
+}
+
+/* Banner Text Readability */
+.auth-banner-content h2, .auth-banner-content p {
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    color: white !important;
+}
+
+/* Premium Form Card */
+.auth-form-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+    border: 1px solid rgba(5, 150, 105, 0.1);
+}
+
+/* Gradient Overlay Fix */
+.auth-banner::before {
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.6), rgba(2, 44, 34, 0.9));
+}
+
+/* Form Container Responsiveness */
+.auth-form-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.role-card-label {
+    padding: 15px 5px !important;
+}
+
+@media (max-width: 320px) {
+    .auth-form-card {
+        padding: 1.5rem !important;
+    }
+    .role-card-label {
+        font-size: 0.7rem;
+        padding: 10px 2px !important;
+    }
+    .role-card-label i {
+        font-size: 1.1rem !important;
+    }
+    .back-btn {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}

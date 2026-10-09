@@ -1,0 +1,446 @@
+/* Destinations Page Custom CSS */
+.page-banner {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.dest-card {
+    transition: all 0.4s ease;
+}
+.dest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
+.dest-img {
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.dest-card:hover .dest-img {
+    transform: scale(1.1);
+}
+.dest-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 70%);
+}
+.region-box {
+    transition: all 0.3s ease;
+}
+.region-box:hover {
+    background-color: var(--primary-color) !important;
+    transform: translateY(-5px);
+    color: white !important;
+}
+.region-box:hover i, .region-box:hover h6 {
+    color: white !important;
+}
+.hidden-gem-img {
+    transition: transform 0.5s ease;
+}
+.hidden-gem-img:hover {
+    transform: scale(1.05);
+}
+.season-card {
+    transition: all 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-10px);
+}
+.accordion-button:not(.collapsed) {
+    background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+    color: var(--primary-color);
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Destinations Mobile Responsive */
+@media (max-width: 768px) {
+    .page-banner {
+        background-attachment: scroll !important;
+    }
+}
+@media (max-width: 320px) {
+    .page-banner h1.display-3 {
+        font-size: 32px;
+    }
+    .page-banner .lead {
+        font-size: 14px;
+    }
+    h2.display-6 {
+        font-size: 24px;
+    }
+    h2.display-4 {
+        font-size: 28px !important;
+    }
+    .dest-img {
+        height: 250px;
+    }
+    .region-box {
+        padding: 15px !important;
+    }
+    .region-box i {
+        font-size: 2em;
+    }
+    .region-box h6 {
+        font-size: 12px;
+    }
+    .season-card {
+        padding: 20px !important;
+    }
+    .accordion-button {
+        font-size: 14px;
+    }
+    .accordion-body {
+        font-size: 12px;
+    }
+}
+
+/* Premium Upgrades */
+.glass-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+.premium-hover::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    background: linear-gradient(45deg, #059669, #064e3b, transparent, #059669);
+    z-index: -1;
+    border-radius: inherit;
+    background-size: 400%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.premium-hover:hover::before {
+    opacity: 1;
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.glass-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.hover-reveal .dest-title,
+.hover-reveal .dest-desc,
+.hover-reveal .dest-btn {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.hover-reveal .dest-title { opacity: 1; transform: translateY(10px); }
+
+.dest-card:hover .hover-reveal .dest-title {
+    transform: translateY(0);
+}
+.dest-card:hover .hover-reveal .dest-desc,
+.dest-card:hover .hover-reveal .dest-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.glowing-bg {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 150px; height: 150px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 0;
+}
+
+.season-card * {
+    position: relative;
+    z-index: 1;
+}
+.season-card .glowing-bg {
+    z-index: 0;
+}
+
+/* 320px Explicit Handling */
+@media (max-width: 320px) {
+    .premium-badge {
+        position: relative !important;
+        display: inline-block;
+        margin: 10px auto !important;
+        top: auto !important; right: auto !important; left: auto !important;
+    }
+    .dest-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .hidden-gem-img {
+        margin-bottom: 15px;
+    }
+    .row > * {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Premium Region Pill Cards */
+.region-pill-card {
+    height: 320px;
+}
+.region-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%);
+}
+.region-pill-card:hover .region-img {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+.region-pill-card:hover {
+    box-shadow: 0 15px 35px rgba(var(--bs-primary-rgb), 0.4) !important;
+    transform: translateY(-10px);
+}
+.region-pill-card:hover .region-icon-wrap {
+    background: var(--primary-color) !important;
+    color: white !important;
+    transform: scale(1.15);
+}
+.region-title {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 576px) {
+    .region-pill-card {
+        height: 250px;
+    }
+}
+@media (max-width: 320px) {
+    .region-pill-card {
+        height: 200px;
+        border-radius: 24px !important; /* On tiny screens, convert pill to a rounded rectangle to preserve image width */
+    }
+}
+
+/* Seasonal Travel Image Reveal Cards */
+.season-reveal-card {
+    height: 400px;
+    cursor: pointer;
+}
+.season-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%);
+}
+.season-hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+}
+.season-reveal-card:hover .season-img {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+.season-reveal-card:hover .season-overlay {
+    background: rgba(0,0,0,0.7);
+}
+.season-reveal-card:hover .season-hidden {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+}
+.season-reveal-card:hover .season-content {
+    transform: translateY(-20px);
+}
+.drop-shadow {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+@media (max-width: 576px) {
+    .season-reveal-card {
+        height: 350px;
+    }
+}
+@media (max-width: 320px) {
+    .season-reveal-card {
+        height: 300px;
+    }
+    /* Always show content on tiny screens since hover is difficult */
+    .season-hidden {
+        opacity: 1;
+        max-height: 200px;
+        transform: translateY(0);
+    }
+    .season-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%);
+    }
+}
+
+/* Hidden Gems Masonry Layout */
+.hidden-gem-card {
+    cursor: pointer;
+}
+.hidden-gem-card:hover .gem-img {
+    transform: scale(1.1);
+}
+.hidden-gem-card .gem-overlay {
+    opacity: 0.8;
+}
+.hidden-gem-card:hover .gem-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(var(--bs-primary-rgb), 0.9), transparent) !important;
+}
+.parallax-section .parallax-bg {
+    background-attachment: fixed !important;
+}
+
+/* Fix Parallax on Mobile and adjust heights */
+@media (max-width: 991px) {
+    .parallax-section .parallax-bg {
+        /* Disable fixed background on mobile/tablets to prevent iOS Safari lag & layout bugs */
+        background-attachment: scroll !important;
+    }
+}
+@media (max-width: 576px) {
+    .hidden-gem-card {
+        height: 280px !important;
+    }
+}
+@media (max-width: 320px) {
+    .hidden-gem-card {
+        height: 220px !important;
+        border-radius: 16px !important;
+    }
+}
+
+/* Spotlight Full-Bleed Section */
+.spotlight-section {
+    min-height: 85vh;
+}
+.spotlight-gradient {
+    /* Desktop: dark left, clear right to see the background image */
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+}
+.glass-spotlight-panel {
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+@media (max-width: 991px) {
+    .spotlight-gradient {
+        /* Mobile/Tablet: darker overall to ensure readability if panel covers more screen */
+        background: rgba(0,0,0,0.5);
+    }
+}
+@media (max-width: 576px) {
+    .spotlight-section {
+        min-height: auto;
+    }
+    .glass-spotlight-panel {
+        background: rgba(10, 10, 10, 0.65);
+    }
+}
+@media (max-width: 320px) {
+    .glass-spotlight-panel {
+        padding: 2rem 1.5rem !important;
+    }
+    .glass-spotlight-panel h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Interactive Global Map Concept */
+.map-container {
+    background: #0b111e;
+}
+.map-ping {
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.ping-dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+.ping-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    animation: radar-ping 2s infinite cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes radar-ping {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
+}
+
+/* CTA Parallax & Glass Panel */
+.cta-glass-panel {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (max-width: 576px) {
+    .map-container {
+        height: 400px !important;
+    }
+    .map-title {
+        font-size: 1.5rem;
+    }
+    .cta-glass-panel {
+        padding: 2.5rem 1.5rem !important;
+    }
+    .cta-title {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 320px) {
+    .map-container {
+        height: 350px !important;
+        border-radius: 20px !important;
+    }
+    .map-title {
+        font-size: 1.25rem;
+    }
+    .map-container .glass-box {
+        padding: 1.25rem !important;
+    }
+    .cta-glass-panel {
+        padding: 2rem 1rem !important;
+        border-radius: 20px !important;
+    }
+    .cta-title {
+        font-size: 1.8rem;
+    }
+}

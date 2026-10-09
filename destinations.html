@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Tour Operator</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logoStackly.webp" type="image/webp">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/destinations.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- 1. Banner Section -->
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center text-white overflow-hidden" style="background: url('assets/images/img_13.webp') center/cover fixed;">
+        <!-- Premium Gradient Overlay -->
+        <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%); z-index: 1;"></div>
+        
+        <div class="container position-relative" style="z-index: 3; padding-top: 100px;">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <h6 class="text-uppercase fw-bold mb-3 tracking-wider text-primary bg-white d-inline-block px-3 py-1 rounded-pill shadow-sm">Explore The World</h6>
+            </div>
+            
+            <h1 class="display-2 fw-bold mb-4 text-shadow hero-spin-title text-white">Our <span class="text-primary">Destinations</span></h1>
+            
+            <p class="lead fw-light mx-auto mb-5 opacity-100 text-white" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="200">
+                From the sun-kissed beaches of the Mediterranean to the frozen wonders of Antarctica, find your next adventure here.
+            </p>
+            
+            <div data-aos="zoom-in" data-aos-delay="400" class="mb-5 pb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center glass-breadcrumb d-inline-flex px-4 py-3 rounded-pill shadow-lg mb-0" style="background: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none fw-bold hover-primary transition-all"><i class="fa-solid fa-house me-2 text-primary"></i>Home</a></li>
+                        <li class="breadcrumb-item active fw-bold text-white-50" aria-current="page">Destinations</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#trending" class="scroll-down-btn position-absolute text-white transition-all" style="bottom: 80px; z-index: 4;">
+            <i class="fa-solid fa-chevron-down fa-2x animate-bounce"></i>
+        </a>
+
+        <!-- Custom SVG Shape Divider -->
+        <div class="custom-shape-divider-bottom position-absolute bottom-0 start-0 w-100" style="z-index: 2; line-height: 0;">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px; fill: #ffffff;">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 2. Trending Destinations -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Most Popular</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Trending This Month</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="dest-card rounded-4 overflow-hidden position-relative shadow-sm h-100 premium-hover glass-card">
+                        <span class="premium-badge position-absolute top-0 end-0 m-3 z-3 bg-white text-primary rounded-pill px-3 py-1 fw-bold shadow-sm"><i class="fa-solid fa-fire text-danger me-1"></i> Hot</span>
+                        <img src="assets/images/img_37.webp" class="img-fluid w-100 dest-img" alt="Paris">
+                        <div class="dest-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 glass-overlay hover-reveal">
+                            <h4 class="text-white fw-bold mb-1 dest-title">Paris, France</h4>
+                            <p class="text-white-50 mb-0 fs-7 dest-desc"><i class="fa-solid fa-star text-warning me-1"></i> 4.9 (2k+ Reviews)</p>
+                            <a href="#" class="btn custom-btn custom-btn-primary btn-sm rounded-pill mt-3 dest-btn w-50">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dest-card rounded-4 overflow-hidden position-relative shadow-sm h-100 premium-hover glass-card">
+                        <span class="premium-badge position-absolute top-0 end-0 m-3 z-3 bg-white text-primary rounded-pill px-3 py-1 fw-bold shadow-sm"><i class="fa-solid fa-bolt text-warning me-1"></i> Fast Selling</span>
+                        <img src="assets/images/img_38.webp" class="img-fluid w-100 dest-img" alt="Dubai">
+                        <div class="dest-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 glass-overlay hover-reveal">
+                            <h4 class="text-white fw-bold mb-1 dest-title">Dubai, UAE</h4>
+                            <p class="text-white-50 mb-0 fs-7 dest-desc"><i class="fa-solid fa-star text-warning me-1"></i> 4.8 (1.5k+ Reviews)</p>
+                            <a href="#" class="btn custom-btn custom-btn-primary btn-sm rounded-pill mt-3 dest-btn w-50">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dest-card rounded-4 overflow-hidden position-relative shadow-sm h-100 premium-hover glass-card">
+                        <span class="premium-badge position-absolute top-0 end-0 m-3 z-3 bg-white text-primary rounded-pill px-3 py-1 fw-bold shadow-sm"><i class="fa-solid fa-gem text-info me-1"></i> Top Rated</span>
+                        <img src="assets/images/img_39.webp" class="img-fluid w-100 dest-img" alt="Tokyo">
+                        <div class="dest-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 glass-overlay hover-reveal">
+                            <h4 class="text-white fw-bold mb-1 dest-title">Tokyo, Japan</h4>
+                            <p class="text-white-50 mb-0 fs-7 dest-desc"><i class="fa-solid fa-star text-warning me-1"></i> 4.9 (3k+ Reviews)</p>
+                            <a href="#" class="btn custom-btn custom-btn-primary btn-sm rounded-pill mt-3 dest-btn w-50">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Destinations by Region -->
+    <section class="py-5 bg-white position-relative">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Browse By Area</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Regions to Explore</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Europe -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="50">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_30.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Europe">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-globe-europe fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Europe</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Asia -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_40.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Asia">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-globe-asia fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Asia</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Americas -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_41.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Americas">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-globe-americas fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Americas</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Africa -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_33.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Africa">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-earth-africa fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Africa</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Oceania -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_42.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Oceania">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-earth-oceania fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Oceania</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Polar -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="#" class="text-decoration-none">
+                        <div class="region-pill-card rounded-pill overflow-hidden position-relative shadow-sm transition-all bg-dark">
+                            <img src="assets/images/img_43.webp" class="img-fluid w-100 h-100 object-fit-cover region-img transition-all" alt="Polar">
+                            <div class="region-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end justify-content-center pb-5 transition-all">
+                                <div class="text-center">
+                                    <div class="region-icon-wrap bg-white text-primary rounded-circle shadow-sm mx-auto d-flex align-items-center justify-content-center mb-3 transition-all" style="width: 50px; height: 50px;">
+                                        <i class="fa-solid fa-igloo fa-lg"></i>
+                                    </div>
+                                    <h5 class="text-white fw-bold mb-0 region-title">Polar</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Hidden Gems -->
+    <section class="py-5 position-relative text-white overflow-hidden parallax-section">
+        <div class="parallax-bg position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_44.webp') center/cover;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(6,78,59,0.95) 0%, rgba(5,150,105,0.85) 100%);"></div>
+        
+        <div class="container position-relative z-2">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
+                    <h6 class="text-uppercase fw-bold mb-3 tracking-wider text-white-50 bg-dark bg-opacity-25 d-inline-block px-3 py-1 rounded-pill">Off The Beaten Path</h6>
+                    <h2 class="display-4 fw-bold mb-4 text-white text-shadow">Discover <br><span class="text-warning">Hidden Gems</span></h2>
+                    <p class="lead fw-light mb-5 opacity-100">Escape the crowds and immerse yourself in untouched beauty. Our secret itineraries take you to places most tourists never even know exist.</p>
+                    
+                    <ul class="list-unstyled mb-5 text-start d-inline-block mx-auto mx-lg-0">
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-3 fa-lg"></i> <span class="fs-5">Exclusive private access</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-3 fa-lg"></i> <span class="fs-5">Untouched natural wonders</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-circle-check text-warning me-3 fa-lg"></i> <span class="fs-5">Authentic local culture</span></li>
+                    </ul>
+                    <br>
+                    <a href="packages.html" class="btn custom-btn custom-btn-secondary rounded-pill px-5 py-3 fw-bold text-dark hover-lift shadow-lg">View Secret Tours <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="row g-4 align-items-center">
+                        <!-- Tall Image -->
+                        <div class="col-12 col-sm-6">
+                            <div class="hidden-gem-card rounded-4 overflow-hidden position-relative shadow-lg border border-white border-opacity-25" style="height: 500px;">
+                                <img src="assets/images/img_45.webp" class="img-fluid w-100 h-100 object-fit-cover gem-img transition-all" alt="Mountain Village">
+                                <div class="gem-overlay position-absolute bottom-0 start-0 w-100 p-4 transition-all" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                                    <h4 class="fw-bold text-white mb-1"><i class="fa-solid fa-location-dot text-warning me-2"></i>Sapa Valley</h4>
+                                    <p class="text-white-50 mb-0 fs-7">Vietnam</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stacked Small Images -->
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="hidden-gem-card rounded-4 overflow-hidden position-relative shadow-lg border border-white border-opacity-25" style="height: 238px;">
+                                    <img src="assets/images/img_46.webp" class="img-fluid w-100 h-100 object-fit-cover gem-img transition-all" alt="Secret Beach">
+                                    <div class="gem-overlay position-absolute bottom-0 start-0 w-100 p-4 transition-all" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                                        <h5 class="fw-bold text-white mb-1"><i class="fa-solid fa-location-dot text-warning me-2"></i>Navagio Cove</h5>
+                                        <p class="text-white-50 mb-0 fs-7">Greece</p>
+                                    </div>
+                                </div>
+                                <div class="hidden-gem-card rounded-4 overflow-hidden position-relative shadow-lg border border-white border-opacity-25" style="height: 238px;">
+                                    <img src="assets/images/img_47.webp" class="img-fluid w-100 h-100 object-fit-cover gem-img transition-all" alt="Emerald Lake">
+                                    <div class="gem-overlay position-absolute bottom-0 start-0 w-100 p-4 transition-all" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                                        <h5 class="fw-bold text-white mb-1"><i class="fa-solid fa-location-dot text-warning me-2"></i>Plitvice Lakes</h5>
+                                        <p class="text-white-50 mb-0 fs-7">Croatia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Seasonal Travel -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Year-Round Magic</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Seasonal Travel</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Spring -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="season-reveal-card rounded-4 overflow-hidden position-relative shadow-sm bg-dark transition-all">
+                        <img src="assets/images/img_48.webp" class="img-fluid w-100 h-100 object-fit-cover season-img transition-all" alt="Spring">
+                        <div class="season-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 transition-all">
+                            <div class="season-content transition-all text-center">
+                                <i class="fa-solid fa-leaf fa-2x text-success mb-2 drop-shadow"></i>
+                                <h4 class="fw-bold text-white mb-1 text-shadow">Spring</h4>
+                                <div class="season-hidden text-center mt-3 transition-all">
+                                    <p class="text-white-50 fs-7 mb-3">Cherry blossoms and fresh blooms across Europe & Asia.</p>
+                                    <a href="#" class="btn btn-sm custom-btn custom-btn-primary rounded-pill px-4 hover-lift">Explore <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summer -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="season-reveal-card rounded-4 overflow-hidden position-relative shadow-sm bg-dark transition-all">
+                        <img src="assets/images/img_49.webp" class="img-fluid w-100 h-100 object-fit-cover season-img transition-all" alt="Summer">
+                        <div class="season-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 transition-all">
+                            <div class="season-content transition-all text-center">
+                                <i class="fa-solid fa-sun fa-2x text-warning mb-2 drop-shadow"></i>
+                                <h4 class="fw-bold text-white mb-1 text-shadow">Summer</h4>
+                                <div class="season-hidden text-center mt-3 transition-all">
+                                    <p class="text-white-50 fs-7 mb-3">Beach getaways and vibrant coastal festivals worldwide.</p>
+                                    <a href="#" class="btn btn-sm custom-btn custom-btn-secondary rounded-pill px-4 hover-lift text-dark fw-bold">Explore <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autumn -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="season-reveal-card rounded-4 overflow-hidden position-relative shadow-sm bg-dark transition-all">
+                        <img src="assets/images/img_50.webp" class="img-fluid w-100 h-100 object-fit-cover season-img transition-all" alt="Autumn">
+                        <div class="season-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 transition-all">
+                            <div class="season-content transition-all text-center">
+                                <i class="fa-solid fa-tree fa-2x text-danger mb-2 drop-shadow"></i>
+                                <h4 class="fw-bold text-white mb-1 text-shadow">Autumn</h4>
+                                <div class="season-hidden text-center mt-3 transition-all">
+                                    <p class="text-white-50 fs-7 mb-3">Golden foliage and wine-tasting tours in cozy regions.</p>
+                                    <a href="#" class="btn btn-sm custom-btn custom-btn-secondary rounded-pill px-4 hover-lift">Explore <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Winter -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="season-reveal-card rounded-4 overflow-hidden position-relative shadow-sm bg-dark transition-all">
+                        <img src="assets/images/img_51.webp" class="img-fluid w-100 h-100 object-fit-cover season-img transition-all" alt="Winter">
+                        <div class="season-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4 transition-all">
+                            <div class="season-content transition-all text-center">
+                                <i class="fa-solid fa-snowflake fa-2x text-info mb-2 drop-shadow"></i>
+                                <h4 class="fw-bold text-white mb-1 text-shadow">Winter</h4>
+                                <div class="season-hidden text-center mt-3 transition-all">
+                                    <p class="text-white-50 fs-7 mb-3">Ski resorts, Northern Lights, and festive winter markets.</p>
+                                    <a href="#" class="btn btn-sm custom-btn custom-btn-secondary rounded-pill px-4 hover-lift text-white fw-bold">Explore <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Travel Advice -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Before You Go</h6>
+                    <h2 class="display-6 fw-bold text-secondary mb-4">Travel Advice & Requirements</h2>
+                    <div class="accordion" id="travelAdviceAccordion">
+                        <div class="accordion-item rounded-3 mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold rounded-3 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fa-solid fa-passport text-primary me-2"></i> Visa Requirements
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#travelAdviceAccordion">
+                                <div class="accordion-body text-muted fs-7">
+                                    Always check visa requirements at least 2 months before departure. Our team assists with e-visas and embassy documentation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item rounded-3 mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold rounded-3 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fa-solid fa-syringe text-primary me-2"></i> Health & Vaccinations
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#travelAdviceAccordion">
+                                <div class="accordion-body text-muted fs-7">
+                                    Consult with your doctor regarding necessary vaccinations for tropical destinations. Carry a basic first-aid kit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item rounded-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold rounded-3 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fa-solid fa-suitcase text-primary me-2"></i> Packing Guides
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#travelAdviceAccordion">
+                                <div class="accordion-body text-muted fs-7">
+                                    Pack light and dress in layers. We provide specialized packing lists tailored to your specific destination and season.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5 text-center" data-aos="fade-left">
+                    <img src="assets/images/img_52.webp" class="img-fluid rounded-circle shadow-lg p-3 bg-white" style="width: 400px; height: 400px; object-fit: cover;" alt="Travel Prep">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Spotlight -->
+    <section class="spotlight-section position-relative text-white overflow-hidden d-flex align-items-center">
+        <!-- Full Background Image -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_53.webp') center/cover;"></div>
+        <!-- Adaptive Gradient Overlay -->
+        <div class="spotlight-gradient position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <div class="container position-relative z-3 py-5">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-6 col-xl-5" data-aos="fade-right">
+                    <div class="glass-spotlight-panel p-4 p-md-5 rounded-4 shadow-lg border border-white border-opacity-25 transition-all">
+                        <div class="d-inline-block bg-primary text-white px-3 py-1 rounded-pill fw-bold text-uppercase fs-7 tracking-wider mb-4 shadow-sm">Destination Spotlight</div>
+                        <h2 class="display-6 fw-bold mb-4 text-white text-shadow">The Magic of <br><span class="text-primary">Santorini</span></h2>
+                        <p class="lead fw-light mb-4 text-white-50">Experience breathtaking sunsets, iconic blue-domed churches, and exquisite Mediterranean cuisine.</p>
+                        
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-anchor text-primary me-3 fa-lg"></i> <span class="fw-medium">Private sunset yacht cruises</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-wine-glass text-primary me-3 fa-lg"></i> <span class="fw-medium">Exclusive wine tasting tours</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-hotel text-primary me-3 fa-lg"></i> <span class="fw-medium">Luxury cliffside accommodations</span></li>
+                        </ul>
+                        
+                        <a href="packages.html" class="btn custom-btn custom-btn-primary rounded-pill px-5 py-3 fw-bold hover-lift shadow-lg w-100 text-center text-white">Explore Santorini Packages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Global Network (Map Concept) -->
+    <section class="py-5 bg-white text-center position-relative">
+        <div class="container">
+            <h6 class="text-primary text-uppercase fw-bold mb-2 tracking-wider">Global Reach</h6>
+            <h2 class="display-6 fw-bold text-secondary mb-5">We Cover The Globe</h2>
+            
+            <div class="position-relative w-100 rounded-5 overflow-hidden shadow-lg border border-5 border-white map-container" data-aos="zoom-in" style="height: 500px; background: #0b111e;">
+                <!-- Earth Network Image -->
+                <img src="assets/images/img_54.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" style="mix-blend-mode: screen;" alt="Global Network">
+                
+                <!-- Center Content -->
+                <div class="position-absolute top-50 start-50 translate-middle w-100 text-center px-3 z-3">
+                    <div class="glass-box d-inline-block p-4 rounded-4 shadow-lg border border-white border-opacity-10 transition-all" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                        <h3 class="fw-bold text-white mb-2 map-title">60+ Countries <span class="text-primary">&</span> Counting</h3>
+                        <p class="text-white-50 mb-0">From bustling cities to the most remote islands on Earth.</p>
+                    </div>
+                </div>
+
+                <!-- Animated Map Pings (Absolute Positions) -->
+                <div class="map-ping position-absolute" style="top: 30%; left: 20%;"><span class="ping-dot bg-primary"></span></div>
+                <div class="map-ping position-absolute" style="top: 45%; left: 45%;"><span class="ping-dot bg-warning"></span></div>
+                <div class="map-ping position-absolute" style="top: 60%; left: 52%;"><span class="ping-dot bg-primary"></span></div>
+                <div class="map-ping position-absolute" style="top: 40%; left: 75%;"><span class="ping-dot bg-warning"></span></div>
+                <div class="map-ping position-absolute" style="top: 75%; left: 85%;"><span class="ping-dot bg-primary"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CTA -->
+    <section class="position-relative text-white overflow-hidden parallax-section" style="padding: 120px 0;">
+        <div class="parallax-bg position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/images/img_55.webp') center/cover;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, transparent 0%, rgba(var(--bs-primary-rgb), 0.5) 100%);"></div>
+        
+        <div class="container position-relative z-3 text-center" data-aos="zoom-in">
+            <div class="glass-box d-inline-block p-4 p-md-5 rounded-5 shadow-lg border border-white border-opacity-25 w-100 cta-glass-panel" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); max-width: 800px;">
+                <h2 class="display-4 fw-bold mb-4 text-white cta-title">Find Your Next <br class="d-sm-none"><span class="text-warning">Destination</span></h2>
+                <p class="lead mb-5 text-white-50 mx-auto" style="max-width: 600px;">Tell us what kind of experience you're looking for, and our experts will curate the perfect itinerary tailored just for you.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="packages.html" class="btn custom-btn custom-btn-secondary rounded-pill px-5 py-3 fw-bold text-dark hover-lift shadow-lg"><i class="fa-solid fa-compass me-2"></i>Browse Packages</a>
+                    <a href="contact.html" class="btn custom-btn custom-btn-outlined rounded-pill px-5 py-3 fw-bold hover-lift"><i class="fa-solid fa-headset me-2"></i>Talk to an Expert</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Custom Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof gsap !== 'undefined') {
+                gsap.fromTo(".hero-spin-title", 
+                    { opacity: 0, scale: 0.2, rotation: -180 }, 
+                    { opacity: 1, scale: 1, rotation: 0, duration: 1.2, delay: 0.2, ease: "back.out(1.7)" }
+                );
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,570 @@
+/* Packages Page Custom CSS */
+.page-banner {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.package-card {
+    transition: all 0.4s ease;
+}
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+.package-img-wrapper {
+    height: 250px;
+}
+.package-img-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.package-card:hover .package-img-wrapper img {
+    transform: scale(1.1);
+}
+.horizontal-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.horizontal-card:hover {
+    transform: translateY(-5px);
+    background-color: #fff !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+.horizontal-img-wrapper {
+    overflow: hidden;
+}
+.horizontal-card:hover .horizontal-img-wrapper img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+.romantic-card {
+    height: 400px;
+}
+.romantic-img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.romantic-card:hover .romantic-img {
+    transform: scale(1.1);
+}
+.romantic-overlay {
+    background: rgba(0,0,0,0.4);
+    transition: background 0.4s ease;
+}
+.romantic-card:hover .romantic-overlay {
+    background: rgba(0,0,0,0.6);
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.adventure-card {
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+.adventure-card:active {
+    cursor: grabbing;
+}
+.adventure-card:hover {
+    transform: translateY(-5px);
+}
+.hover-primary {
+    transition: all 0.3s ease;
+}
+.hover-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    transform: translateY(-5px);
+}
+.hover-primary:hover i, .hover-primary:hover h6 {
+    color: white !important;
+}
+
+/* Packages Mobile Responsive */
+@media (max-width: 768px) {
+    .page-banner {
+        background-attachment: scroll !important;
+    }
+    .horizontal-img-wrapper {
+        max-width: 100% !important;
+        height: 250px;
+    }
+}
+@media (max-width: 320px) {
+    .page-banner h1.display-3 {
+        font-size: 32px;
+    }
+    .page-banner .lead {
+        font-size: 14px;
+    }
+    h2.display-6 {
+        font-size: 24px;
+    }
+    .filter-section form {
+        padding: 15px !important;
+    }
+    .package-img-wrapper {
+        height: 200px;
+    }
+    .package-card h4 {
+        font-size: 20px;
+    }
+    .horizontal-img-wrapper {
+        height: 200px;
+    }
+    .horizontal-card h4 {
+        font-size: 20px;
+    }
+    .romantic-card {
+        height: 300px;
+    }
+    .included-box {
+        padding: 15px !important;
+    }
+    .included-box i {
+        font-size: 2em;
+    }
+    .included-box h6 {
+        font-size: 12px;
+    }
+}
+
+/* Glassmorphism & Premium Design Upgrades */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.floating-badge {
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.package-card {
+    border: 1px solid rgba(5, 150, 105, 0.1);
+    background: linear-gradient(145deg, #ffffff, #f9fdfa);
+}
+
+.package-card .package-img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    pointer-events: none;
+}
+
+.package-card h4 {
+    position: relative;
+    z-index: 1;
+}
+
+.romantic-overlay {
+    background: rgba(6, 78, 59, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+.romantic-card:hover .romantic-overlay {
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.hover-primary:hover {
+    box-shadow: 0 15px 30px rgba(5, 150, 105, 0.2) !important;
+}
+
+.included-box {
+    border: 1px solid rgba(5, 150, 105, 0.1);
+}
+
+/* 320px Ultra-mobile Responsive Fixes */
+@media (max-width: 320px) {
+    /* Stack all grids to single column */
+    .row > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    
+    .badge.position-absolute {
+        position: relative !important;
+        display: inline-block !important;
+        margin: 10px !important;
+        top: auto !important;
+        end: auto !important;
+        left: auto !important;
+    }
+
+    .horizontal-card {
+        flex-direction: column !important;
+    }
+    
+    .d-flex.overflow-auto {
+        flex-direction: column !important;
+        overflow: visible !important;
+    }
+    
+    .adventure-card {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .filter-section form {
+        flex-direction: column !important;
+    }
+
+    .filter-section form > div {
+        width: 100% !important;
+    }
+}
+
+/* Premium Floating Search Box */
+.glass-search-box {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+.input-group-custom select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    background-color: white !important;
+}
+.hover-shadow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+.search-btn {
+    letter-spacing: 1px;
+}
+
+@media (max-width: 576px) {
+    .glass-search-box {
+        padding: 2rem 1.5rem !important;
+        border-radius: 20px !important;
+    }
+}
+@media (max-width: 320px) {
+    .glass-search-box {
+        padding: 1.5rem 1rem !important;
+    }
+    .input-group-custom select {
+        padding-top: 0.6rem !important;
+        padding-bottom: 0.6rem !important;
+    }
+    .search-btn {
+        padding-top: 0.8rem !important;
+        padding-bottom: 0.8rem !important;
+    }
+}
+
+/* Luxury Package Cards */
+.luxury-package-card {
+    border-color: rgba(0,0,0,0.05) !important;
+}
+.luxury-img-wrapper {
+    height: 300px;
+}
+.luxury-gradient-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
+.price-bubble {
+    width: 75px; 
+    height: 75px; 
+    top: -37px; 
+    right: 25px;
+}
+.luxury-package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+.luxury-package-card:hover img {
+    transform: scale(1.1);
+}
+.luxury-package-card:hover .price-bubble {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--secondary-color) !important;
+}
+
+@media (max-width: 576px) {
+    .luxury-img-wrapper {
+        height: 250px;
+    }
+}
+@media (max-width: 320px) {
+    .luxury-img-wrapper {
+        height: 220px;
+    }
+    .price-bubble {
+        width: 65px;
+        height: 65px;
+        top: -32px;
+        right: 15px;
+    }
+    .price-bubble .fs-5 {
+        font-size: 1.1rem !important;
+    }
+    .luxury-package-card .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Family Packages Overlapping Cards */
+.family-img {
+    height: 400px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.family-content-col {
+    margin-left: -50px;
+}
+.family-content-box {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.family-card:hover .family-content-box {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+.family-card:hover .family-img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 991px) {
+    .family-content-col {
+        margin-left: -30px;
+    }
+    .family-img {
+        height: 350px !important;
+    }
+}
+@media (max-width: 576px) {
+    .family-img {
+        height: 250px !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .family-content-col {
+        margin-left: 0;
+        margin-top: -30px; /* Overlap vertically upwards on mobile */
+    }
+}
+@media (max-width: 320px) {
+    .family-img {
+        height: 200px !important;
+    }
+    .family-content-col {
+        margin-top: -40px;
+    }
+    .family-content-box {
+        padding: 1.5rem !important;
+    }
+    .family-content-box h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Romantic Packages Cinematic Layout */
+.font-serif {
+    font-family: "Playfair Display", Georgia, serif;
+}
+.romantic-img {
+    height: 450px !important;
+}
+.romantic-glass-box {
+    opacity: 0.95;
+}
+.romantic-card:hover .romantic-img {
+    transform: scale(1.05);
+}
+.romantic-card:hover .romantic-panel {
+    background: rgba(10, 10, 10, 0.95) !important;
+    border-color: rgba(var(--bs-warning-rgb), 0.5) !important;
+    box-shadow: 0 0 20px rgba(var(--bs-warning-rgb), 0.2);
+}
+.romantic-card:hover .romantic-icon {
+    transform: scale(1.2) translateY(-5px);
+}
+
+@media (max-width: 576px) {
+    .romantic-img {
+        height: 380px !important;
+    }
+}
+@media (max-width: 320px) {
+    .romantic-img {
+        height: 320px !important;
+    }
+    .romantic-glass-box {
+        padding: 0.75rem !important;
+    }
+    .romantic-panel {
+        padding: 1.25rem !important;
+        border-radius: 12px !important;
+    }
+    .romantic-panel h3 {
+        font-size: 1.3rem;
+    }
+    .romantic-icon {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* Adventure Cards */
+.adv-gradient {
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+}
+.adventure-card {
+    cursor: pointer;
+}
+.adventure-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+.adventure-card:hover .adv-img {
+    transform: scale(1.1);
+}
+.adventure-card:hover .adv-btn {
+    background-color: var(--bs-primary);
+    color: white !important;
+    transform: translateX(5px);
+}
+
+/* What's Included Circular Cards */
+.included-box {
+    cursor: default;
+}
+.included-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+    border-color: rgba(var(--bs-primary-rgb), 0.3) !important;
+}
+.included-box:hover .icon-circle {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    transform: scale(1.1);
+}
+.included-box:hover .title-text {
+    color: var(--bs-primary) !important;
+}
+
+@media (max-width: 576px) {
+    .included-box {
+        max-width: 200px !important;
+    }
+    .icon-circle {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .icon-circle i {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 320px) {
+    .adventure-card .overflow-hidden {
+        height: 200px !important;
+    }
+    .included-box {
+        max-width: 160px !important;
+        padding: 1rem !important;
+    }
+    .icon-circle {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .icon-circle i {
+        font-size: 1.25rem;
+    }
+    .included-box h6 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Custom Itinerary Section */
+.custom-itinerary-card:hover .custom-img-col img {
+    transform: scale(1.05);
+}
+.icon-check-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(var(--bs-primary-rgb), 0.3);
+}
+.custom-float-badge {
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* CTA Parallax Section */
+.cta-glass-panel {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cta-glass-panel:hover {
+    background: rgba(255,255,255,0.2) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3) !important;
+}
+.cta-icon-ring {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cta-glass-panel:hover .cta-icon-ring {
+    transform: scale(1.15) rotate(15deg);
+    background-color: var(--bs-warning) !important;
+    color: var(--bs-dark) !important;
+}
+
+@media (max-width: 991px) {
+    .custom-img-col {
+        height: 350px !important;
+    }
+}
+@media (max-width: 576px) {
+    .cta-section-wrapper {
+        padding: 60px 0 !important;
+    }
+    .custom-img-col {
+        height: 300px !important;
+    }
+}
+@media (max-width: 320px) {
+    .custom-img-col {
+        height: 250px !important;
+    }
+    .custom-text-col {
+        padding: 1.5rem !important;
+    }
+    .custom-text-col h2 {
+        font-size: 1.4rem;
+    }
+    .cta-glass-panel {
+        padding: 1.5rem !important;
+        border-radius: 20px !important;
+    }
+    .cta-title {
+        font-size: 1.6rem;
+    }
+    .cta-icon-ring {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .cta-icon-ring i {
+        font-size: 1.5rem;
+    }
+}
+
+.icon-bg-light {
+    background-color: rgba(5, 150, 105, 0.1) !important;
+}

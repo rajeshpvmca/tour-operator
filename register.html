@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Business Services Authentication</title>
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-100">
+            <!-- Left: Banner -->
+            <div class="col-lg-5 d-none d-lg-block auth-banner" style="background-image: url('assets/images/img_85.webp');">
+                <div class="auth-banner-content">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="assets/images/logoStackly.webp" alt="Stackly" height="60" style="filter: brightness(0) invert(1);">
+                    </a>
+                    <div class="text-white mt-auto mb-5 pb-5">
+                        <h2 class="display-4 fw-bolder mb-3">Join Stackly</h2>
+                        <p class="lead opacity-75" style="line-height: 1.8;">Create an account today and start transforming your digital ideas into reality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="col-12 col-lg-7 d-flex align-items-center position-relative bg-light">
+                <!-- Back to Home Button -->
+                <div class="auth-form-container w-100 px-3 px-md-5 mt-5 mt-lg-0">
+                    <div class="auth-form-card p-4 p-md-5 mx-auto position-relative">
+                        <!-- Back to Home -->
+                        <a href="index.html" class="text-muted text-decoration-none fw-bold transition-hover d-inline-flex align-items-center mb-4" style="font-size: 0.9rem;">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Home
+                        </a>
+
+                        <div class="text-center mb-4 pb-2 border-bottom border-light mt-n2">
+                            <div class="theme-logo-mask d-lg-none mx-auto mb-4" style="width: 150px; height: 50px;"></div>
+                            <h2 class="fw-bolder display-6 text-dark">Create Account</h2>
+                            <p class="text-muted fs-6">Register to get full access.</p>
+                        </div>
+
+                        <!-- signupForm is bound in auth.js -->
+                        <form id="signupForm">
+                            <!-- Role Selection -->
+                            <div class="mb-4">
+                                <label class="fw-bold mb-2 text-muted small text-uppercase letter-spacing-1">Select Role</label>
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <input type="radio" name="role" id="roleTraveler" value="Traveler" class="role-card-input" checked required>
+                                        <label for="roleTraveler" class="role-card-label w-100 px-1"><i class="fas fa-suitcase-rolling mb-1 d-block"></i> Traveler</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="radio" name="role" id="roleTourGuide" value="TourGuide" class="role-card-input" required>
+                                        <label for="roleTourGuide" class="role-card-label w-100 px-1"><i class="fas fa-compass mb-1 d-block"></i> Guide</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="radio" name="role" id="roleAdmin" value="Admin" class="role-card-input" required>
+                                        <label for="roleAdmin" class="role-card-label w-100 px-1"><i class="fas fa-user-shield mb-1 d-block"></i> Admin</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Username -->
+                            <div class="mb-3 position-relative">
+                                <label class="fw-bold mb-2 text-muted small text-uppercase letter-spacing-1" for="name">Username</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" class="form-control custom-input w-100" id="name" placeholder="John Doe" oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')" required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3 position-relative">
+                                <label class="fw-bold mb-2 text-muted small text-uppercase letter-spacing-1" for="email">Email Address</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-envelope input-icon"></i>
+                                    <input type="email" class="form-control custom-input w-100" id="email" placeholder="hello@example.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Passwords in a Row -->
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <label class="fw-bold mb-2 text-muted small text-uppercase letter-spacing-1" for="password">Password</label>
+                                    <div class="position-relative">
+                                        <i class="fas fa-lock input-icon"></i>
+                                        <input type="password" class="form-control custom-input w-100 pe-5" id="password" placeholder="Create password" required>
+                                        <button type="button" class="toggle-password"><i class="far fa-eye"></i></button>
+                                    </div>
+                                    
+                                    <!-- Strength Meter visually integrated -->
+                                    <div class="password-strength-meter mt-3 d-flex gap-1">
+                                        <div class="strength-bar flex-fill rounded-pill" data-score="0"></div>
+                                        <div class="strength-bar flex-fill rounded-pill" data-score="0"></div>
+                                        <div class="strength-bar flex-fill rounded-pill" data-score="0"></div>
+                                        <div class="strength-bar flex-fill rounded-pill" data-score="0"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1">
+                                        <small class="text-muted" style="font-size: 0.65rem;">Min 8 chars, 1 uppercase, 1 symbol, 1 num</small>
+                                        <small class="strength-text fw-bold text-muted" style="font-size: 0.65rem;"></small>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label class="fw-bold mb-2 text-muted small text-uppercase letter-spacing-1" for="confirmPassword">Confirm</label>
+                                    <div class="position-relative">
+                                        <i class="fas fa-lock-open input-icon"></i>
+                                        <input type="password" class="form-control custom-input w-100 pe-5" id="confirmPassword" placeholder="Confirm password" required>
+                                        <button type="button" class="toggle-password"><i class="far fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- T&C -->
+                            <div class="mb-4 mt-3 form-check">
+                                <input type="checkbox" class="form-check-input mt-1" id="terms" required>
+                                <label class="form-check-label text-muted fw-semibold ms-1" style="font-size: 0.9rem;" for="terms">I agree to the <a href="404.html" class="text-primary text-decoration-none">Terms</a> and Privacy Policy</label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="custom-btn custom-btn-primary w-100 fw-bolder fs-5 mt-2">Sign Up</button>
+                        </form>
+                            <p class="text-center text-muted mt-5 mb-0 fw-semibold">Already have an account? <a href="login.html" class="text-primary fw-bolder text-decoration-none transition-hover ms-1">Sign In</a></p>
+                
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    
+    <!-- Real-time Password Strength Meter JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const passInput = document.getElementById('password');
+            const bars = document.querySelectorAll('.strength-bar');
+            const text = document.querySelector('.strength-text');
+            
+            if(passInput && bars.length > 0) {
+                passInput.addEventListener('input', function() {
+                    const val = this.value;
+                    let score = 0;
+                    if(val.length >= 8) score++;
+                    if(/[A-Z]/.test(val)) score++;
+                    if(/[0-9]/.test(val)) score++;
+                    if(/[^A-Za-z0-9]/.test(val)) score++;
+                    
+                    bars.forEach(b => b.className = 'strength-bar flex-fill rounded-pill');
+                    
+                    if(score > 0) bars[0].classList.add('active-weak');
+                    if(score > 1) bars[1].classList.add('active-fair');
+                    if(score > 2) bars[2].classList.add('active-good');
+                    if(score > 3) bars[3].classList.add('active-strong');
+                    
+                    const texts = ["", "Weak", "Fair", "Good", "Strong"];
+                    const colors = ["text-muted", "text-danger", "text-warning", "text-info", "text-success"];
+                    
+                    text.textContent = val.length === 0 ? texts[0] : texts[score];
+                    text.className = 'strength-text fw-bold ' + (val.length === 0 ? colors[0] : colors[score]);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

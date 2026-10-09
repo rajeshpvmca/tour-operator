@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tour Operator</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logoStackly.webp" type="image/webp">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css"> <!-- For shared banner styles -->
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- 1. Banner Section -->
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center text-white overflow-hidden" style="background: url('assets/images/img_13.webp') center/cover fixed;">
+        <!-- Premium Gradient Overlay -->
+        <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%); z-index: 1;"></div>
+        
+        <div class="container position-relative" style="z-index: 3; padding-top: 100px;">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <h6 class="text-uppercase fw-bold mb-3 tracking-wider text-primary bg-white d-inline-block px-3 py-1 rounded-pill shadow-sm">Travel Stories</h6>
+            </div>
+            
+            <h1 class="display-2 fw-bold mb-4 text-shadow hero-spin-title text-white">Our <span class="text-primary">Blog</span></h1>
+            
+            <p class="lead fw-light mx-auto mb-5 opacity-100 text-white" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="200">
+                Discover hidden gems, travel tips, and incredible stories from adventurers around the world.
+            </p>
+            
+            <div data-aos="zoom-in" data-aos-delay="400" class="mb-5 pb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center glass-breadcrumb d-inline-flex px-4 py-3 rounded-pill shadow-lg mb-0" style="background: rgba(0, 0, 0, 0.5) !important; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none fw-bold hover-primary transition-all"><i class="fa-solid fa-house me-2 text-primary"></i>Home</a></li>
+                        <li class="breadcrumb-item active fw-bold text-white-50" aria-current="page">Blog</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#featured" class="scroll-down-btn position-absolute text-white transition-all" style="bottom: 80px; z-index: 4;">
+            <i class="fa-solid fa-chevron-down fa-2x animate-bounce"></i>
+        </a>
+
+        <!-- Custom SVG Shape Divider -->
+        <div class="custom-shape-divider-bottom position-absolute bottom-0 start-0 w-100" style="z-index: 2; line-height: 0;">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px; fill: #ffffff;">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 2. Featured Post -->
+    <section id="featured" class="py-5 bg-white position-relative">
+        <div class="container">
+            <div class="row mb-4" data-aos="fade-up">
+                <div class="col-12 text-center">
+                    <h6 class="text-primary text-uppercase fw-bold tracking-wider mb-2">Must Read</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Featured Story</h2>
+                </div>
+            </div>
+            
+            <div class="featured-blog border border-light" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-lg-7 featured-img-wrap">
+                        <span class="category-badge">Adventure</span>
+                        <img src="assets/images/img_14.webp" alt="Featured Blog" class="featured-img position-absolute top-0 start-0">
+                    </div>
+                    <div class="col-12 col-lg-5 p-4 p-md-5 bg-white position-relative z-2">
+                        <div class="d-flex align-items-center mb-3 text-muted fs-7">
+                            <span><i class="fa-regular fa-calendar me-2 text-primary"></i> Oct 15, 2026</span>
+                            <span class="mx-2">â€¢</span>
+                            <span><i class="fa-regular fa-clock me-2 text-primary"></i> 5 min read</span>
+                        </div>
+                        <h3 class="display-6 fw-bold mb-3 text-dark">The Ultimate Guide to Backpacking Through the Swiss Alps</h3>
+                        <p class="text-muted mb-4 lead fs-6">Discover the hidden trails, majestic peaks, and secret villages that make the Swiss Alps the greatest backpacking destination in the world. Here's everything you need to know before you go.</p>
+                        
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-light">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/images/img_15.webp" alt="Author" class="author-avatar me-3">
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark fs-7">Sarah Jenkins</h6>
+                                    <small class="text-muted">Travel Expert</small>
+                                </div>
+                            </div>
+                            <a href="#" class="btn custom-btn custom-btn-outlined rounded-pill px-4 fw-bold hover-lift">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Recent Articles Grid -->
+    <section class="py-5 bg-light position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: radial-gradient(circle at top left, rgba(5,150,105,0.05) 0%, transparent 50%); pointer-events: none;"></div>
+        
+        <div class="container position-relative z-2">
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-12 text-center">
+                    <h6 class="text-primary text-uppercase fw-bold tracking-wider mb-2">Latest News</h6>
+                    <h2 class="display-6 fw-bold text-secondary">Recent Articles</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Blog Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Culture</span>
+                            <img src="assets/images/img_16.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Oct 10, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 24 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">Top 10 Hidden Temples in Bali You Must Visit</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">Escape the tourist crowds and explore these serene, ancient temples hidden deep within the lush jungles of Bali.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Tips</span>
+                            <img src="assets/images/img_17.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Oct 05, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 18 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">How to Pack Light for a 2-Week European Trip</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">Master the art of minimalist packing with our comprehensive guide to surviving Europe with just a carry-on.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Wildlife</span>
+                            <img src="assets/images/img_18.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Sep 28, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 42 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">A Beginner's Guide to the African Safari</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">Everything you need to know about booking, preparing for, and enjoying your very first African wildlife safari.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Food</span>
+                            <img src="assets/images/img_19.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Sep 22, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 31 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">The Best Street Food Markets in Southeast Asia</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">Take a culinary journey through Bangkok, Penang, and Hanoi to taste the world's most incredible street food.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Romance</span>
+                            <img src="assets/images/img_20.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Sep 15, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 55 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">7 Most Romantic Cities in Europe for Couples</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">From the canals of Venice to the streets of Paris, discover the perfect European destinations for your romantic getaway.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 6 -->
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="blog-card h-100 shadow-sm d-flex flex-column">
+                        <div class="blog-img-wrapper" style="height: 250px;">
+                            <span class="category-badge">Photography</span>
+                            <img src="assets/images/img_21.webp" alt="Blog Post" class="blog-img h-100">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                            <div class="d-flex justify-content-between text-muted fs-8 mb-3">
+                                <span><i class="fa-regular fa-calendar me-1 text-primary"></i> Sep 08, 2026</span>
+                                <span><i class="fa-regular fa-comment me-1 text-primary"></i> 12 Comments</span>
+                            </div>
+                            <h4 class="fw-bold mb-3 text-dark"><a href="#" class="text-decoration-none text-dark transition-all hover-primary">Travel Photography Tips: Capturing the Moment</a></h4>
+                            <p class="text-muted mb-4 fs-7 flex-grow-1">Learn how to take professional-grade travel photos using just your smartphone or a basic DSLR camera.</p>
+                            <a href="#" class="fw-bold text-primary text-decoration-none d-inline-flex align-items-center">Read Article <i class="fa-solid fa-arrow-right ms-2 fs-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5 pt-4" data-aos="fade-up">
+                <div class="col-12 d-flex justify-content-center">
+                    <nav aria-label="Blog navigation">
+                        <ul class="pagination pagination-emerald mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Custom Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof gsap !== 'undefined') {
+                gsap.fromTo(".hero-spin-title", 
+                    { opacity: 0, scale: 0.2, rotation: -180 }, 
+                    { opacity: 1, scale: 1, rotation: 0, duration: 1.2, delay: 0.2, ease: "back.out(1.7)" }
+                );
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
