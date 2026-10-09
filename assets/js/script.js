@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+﻿document.addEventListener("DOMContentLoaded", function() {
     // Load Header & Footer
     Promise.all([
         fetch('header.html').then(res => res.text()),
@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", function() {
     ]).then(([headerData, footerData]) => {
         document.getElementById('header-placeholder').innerHTML = headerData;
         document.getElementById('footer-placeholder').innerHTML = footerData;
+
+        // Auto-assign active class to current nav link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.main-header .nav-link');
+        navLinks.forEach(link => {
+            if(link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
         
         // Header scroll effect
         const header = document.querySelector('.main-header');
@@ -190,3 +199,4 @@ function initThreeJS() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 }
+

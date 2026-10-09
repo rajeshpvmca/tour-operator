@@ -1,11 +1,11 @@
-﻿<header class="main-header" id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+<header class="main-header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
            <a class="navbar-brand position-relative z-index-1060" href="index.html">
-            <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center left; mask-size: contain; background-color: var(--primary-color); width: 140px; height: 45px;"
-                aria-label="Stackly Logo"></div>
+            <!-- Ensure logo is visibly green on all devices -->
+            <div class="header-logo-mask" aria-label="Stackly Logo"></div>
         </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mobileMenu">
@@ -17,13 +17,74 @@
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="d-flex align-items-center contact-header">
-                    <a href="login.html" class="btn custom-btn custom-btn-primary rounded-pill px-4">Login</a>
+                <div class="d-flex align-items-center contact-header mt-3 mt-lg-0">
+                    <a href="login.html" class="btn custom-btn custom-btn-primary rounded-pill px-4 login-btn-animated">
+                        Login <i class="fa-solid fa-arrow-right-to-bracket ms-2 login-icon"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 </header>
+
+<style>
+    /* 1. Header Logo Mask ensuring cross-device support */
+    .header-logo-mask {
+        -webkit-mask: url('assets/images/logoStackly.webp') no-repeat center left;
+        -webkit-mask-size: contain;
+        mask: url('assets/images/logoStackly.webp') no-repeat center left;
+        mask-size: contain;
+        background-color: var(--primary-color, #059669);
+        width: 150px;
+        height: 45px;
+        display: inline-block;
+    }
+
+    /* 2. Custom Mobile Toggler (Emerald Green) */
+    .custom-toggler {
+        border-color: var(--primary-color) !important;
+    }
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(5, 150, 105, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    .custom-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(5, 150, 105, 0.25) !important;
+    }
+
+    /* 3. Active Nav Link Styling */
+    .navbar-nav .nav-link {
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: var(--primary-color) !important;
+    }
+    .navbar-nav .nav-link.active::after {
+        width: 100%;
+    }
+
+    /* 4. Login Button Rotate Icon Animation */
+    .login-btn-animated .login-icon {
+        transition: transform 0.4s ease;
+        display: inline-block;
+    }
+    .login-btn-animated:hover .login-icon {
+        transform: rotate(360deg);
+    }
+</style>
 
 
 
