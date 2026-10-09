@@ -123,10 +123,10 @@
                 <div class="col-md-7 col-sm-12 col-12" data-aos="fade-left">
                     <div class="glass-panel p-4 p-md-5">
                         <h4 class="mb-4 fw-bold">Send a Message</h4>
-                        <form class="premium-form">
+                        <form action="404.html" class="premium-form">
                             <div class="row">
                                 <div class="col-md-6 mb-3 col-sm-12 col-12">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" placeholder="Your Name" oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')" required >
                                 </div>
                                 <div class="col-md-6 mb-3 col-sm-12 col-12">
                                     <input type="email" class="form-control" placeholder="Your Email" required>
