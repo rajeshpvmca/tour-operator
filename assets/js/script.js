@@ -42,13 +42,41 @@
         }
     });
 
-    // Initialize AOS
-    if(typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    }
+    // --- Preloader & AOS Initialization Logic ---
+    const preloader = document.getElementById('global-preloader');
+    
+    // We delay the initialization by 2 seconds (2000ms) to ensure preloader is visible
+    setTimeout(() => {
+        if (preloader) {
+            // Fade out preloader
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            
+            // Allow body scrolling again
+            document.body.classList.remove('loading-active');
+            
+            // Wait for fade out transition (0.6s) then remove from DOM and trigger animations
+            setTimeout(() => {
+                preloader.remove();
+                
+                // Initialize AOS strictly AFTER preloader finishes!
+                if(typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true
+                    });
+                }
+            }, 600);
+        } else {
+            // Fallback if no preloader exists on the page
+            if(typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true
+                });
+            }
+        }
+    }, 2000); // Strict 2 second preloader delay
 
     // Initialize Hero Swiper if exists
     let heroSwiper;
@@ -199,4 +227,5 @@ function initThreeJS() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 }
+
 
